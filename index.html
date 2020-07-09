@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section class="hsl-ranges">
+            <div class="form-container">
+                <form>
+                    <label for="hue" class="hueText">Hue</label>
+                    <input type="range" min="0" max="360" step="1" value="60" id="hue" name="hue">
+          
+                    <label for="saturation" class="saturationText">Saturation</label>
+                    <input type="range" min="0" max="100" step="1" value="72" id="saturation" name="saturation">
+          
+                    <label for="brightness" class="brightnessText">Brightness</label>
+                    <input type="range" min="0" max="100" step="1" value="80" id="brightness" name="brightness">
+                </form>
+                <div class="output">
+                     <h3>hsl(<span onkeypress="return (this.innerText.length <= 2)" contenteditable="true" class="hueValue">60</span>&deg;, <span onkeypress="return (this.innerText.length <= 2)" contenteditable="true" class="saturationValue">72</span>%, <span onkeypress="return (this.innerText.length <= 2)" contenteditable="true" class="brightnessValue">80</span>%)</h3> 
+                     
+                     <!-- onkeypress="return (this.innerText.length <= 2)" -->
+                </div>
+            </div>
+        </section>
+
+        <section class="palette-cards">
+            <div class="palette">
+                <div class="palette__container">
+                    <div class="color-container">
+                        <div class="color1 color"></div>
+                        <p onkeypress="return (this.innerText.length <= 6)" contenteditable="true">#505050</p>
+                    </div>
+                    
+                    <div class="color-container">
+                        <div class="color2 color"></div>
+                        <p onkeypress="return (this.innerText.length <= 6)" contenteditable="true">#A1A1A1</p>
+                    </div>
+                    <div class="color-container">
+                        <div class="color3 color"></div>
+                        <p onkeypress="return (this.innerText.length <= 6)" contenteditable="true">#666666</p>
+                    </div>
+                    <div class="color-container">
+                        <div class="color4 color"></div>
+                        <p onkeypress="return (this.innerText.length <= 6)" contenteditable="true">#000000</p>
+                    </div>
+                    <div class="color-container">
+                        <div class="color5 color"></div>
+                        <p onkeypress="return (this.innerText.length <= 6)" contenteditable="true">#FFFFFF</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cards__container">
+                    <div class="card1 card">
+                        <div class="background"></div>
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                        <div class="circle3"></div>
+                        <h4 class="text">Some very important text here</h4>
+                        <div class="button"></div>
+                        <p>Click here</p>
+                    </div>
+                    <div class="card2 card">
+                        <div class="background"></div>
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                        <div class="circle3"></div>
+                        <h4 class="text">Some very important text here</h4>
+                        <div class="button"></div>
+                        <p>Click here</p>
+                    </div>
+                    <div class="card3 card">
+                        <div class="background"></div>
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                        <div class="circle3"></div>
+                        <h4 class="text">Some very important text here</h4>
+                        <div class="button"></div>
+                        <p>Click here</p>
+                    </div>
+                    <div class="card4 card">
+                        <div class="background"></div>
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                        <div class="circle3"></div>
+                        <h4 class="text">Some very important text here</h4>
+                        <div class="button"></div>
+                        <p>Click here</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
