@@ -14,6 +14,15 @@ var isSelectedCard1Button = false;
 var isSelectedCard1ButtonText = false;
 
 
+var isSelectedCard2Background = false;
+var isSelectedCard2Circle1 = false;
+var isSelectedCard2Circle2 = false;
+var isSelectedCard2Circle3 = false;
+var isSelectedCard2Text = false;
+var isSelectedCard2Button = false;
+var isSelectedCard2ButtonText = false;
+
+
 const outputHueValue = document.querySelector(".output .hueValue");
 const outputSaturationValue = document.querySelector(".output .saturationValue");
 const outputBrightnessValue = document.querySelector(".output .brightnessValue");
@@ -36,6 +45,10 @@ const colorFourHexCode = colorFour.nextElementSibling;
 const colorFiveHexCode = colorFive.nextElementSibling;
 // console.log(colorOneHexCode)
 
+
+// ----------------------------------------------------------------------------
+// CARD oNE
+// ----------------------------------------------------------------------------
 const cardOneBackground = document.querySelector(".card1.card .background");
 const cardOneCircleOne = document.querySelector(".card1.card .circle1");
 const cardOneCircleTwo = document.querySelector(".card1.card .circle2");
@@ -43,6 +56,21 @@ const cardOneCircleThree = document.querySelector(".card1.card .circle3");
 const cardOneText = document.querySelector(".card1.card .text");
 const cardOneButton = document.querySelector(".card1.card .button");
 const cardOneButtonText = document.querySelector(".card1.card p");
+
+
+// ----------------------------------------------------------------------------
+// CARD TWO
+// ----------------------------------------------------------------------------
+
+
+const cardTwoBackground = document.querySelector(".card2.card .background");
+const cardTwoCircleOne = document.querySelector(".card2.card .circle1");
+const cardTwoCircleTwo = document.querySelector(".card2.card .circle2");
+const cardTwoCircleThree = document.querySelector(".card2.card .circle3");
+const cardTwoText = document.querySelector(".card2.card .text");
+const cardTwoButton = document.querySelector(".card2.card .button");
+const cardTwoButtonText = document.querySelector(".card2.card p");
+
 
 
 
@@ -762,6 +790,401 @@ function changeCardOneButtonTextToColorFive() {
     let colorFiveBgC = colorFiveHexCode.textContent;
     cardOneButtonText.style.color = colorFiveBgC;
 }
+
+
+// ----------------------------------------------------------------------------
+// CARD TWO
+// ----------------------------------------------------------------------------
+
+// CARD TWO
+// BACKGROUND
+cardTwoBackground.addEventListener("click", checkIsSelectedCard2Background); 
+
+function checkIsSelectedCard2Background() {
+    if (isSelectedCard2Background) {
+        unSelectCardTwoBackground();
+    } else if (!isSelectedCard2Background) {
+        selectCardTwoBackground();
+    }
+}
+function selectCardTwoBackground() {
+    isSelectedCard2Background = true
+        cardTwoBackground.style.border = '3px solid hsl(238, 100%, 68%)';
+        // colorOne.removeEventListener("click", checkIsSelectedColor1); 
+        colorOne.addEventListener("click", changeCardTwoBackgroundToColorOne); 
+        colorTwo.addEventListener("click", changeCardTwoBackgroundToColorTwo); 
+        colorThree.addEventListener("click", changeCardTwoBackgroundToColorThree); 
+        colorFour.addEventListener("click", changeCardTwoBackgroundToColorFour); 
+        colorFive.addEventListener("click", changeCardTwoBackgroundToColorFive); 
+        
+        
+}
+function unSelectCardTwoBackground() {
+    isSelectedCard2Background = false
+    cardTwoBackground.style.border = 'none';
+    // colorOne.addEventListener("click", checkIsSelectedColor1);  
+    colorOne.removeEventListener("click", changeCardTwoBackgroundToColorOne); 
+    colorTwo.removeEventListener("click", changeCardTwoBackgroundToColorTwo); 
+    colorThree.removeEventListener("click", changeCardTwoBackgroundToColorThree); 
+    colorFour.removeEventListener("click", changeCardTwoBackgroundToColorFour); 
+    colorFive.removeEventListener("click", changeCardTwoBackgroundToColorFive); 
+}
+
+function changeCardTwoBackgroundToColorOne() {
+    let colorOneBgC = colorOneHexCode.textContent;
+    cardTwoBackground.style.backgroundColor = colorOneBgC;
+}
+function changeCardTwoBackgroundToColorTwo() {
+    let colorTwoBgC = colorTwoHexCode.textContent;
+    cardTwoBackground.style.backgroundColor = colorTwoBgC;
+}
+function changeCardTwoBackgroundToColorThree() {
+    let colorThreeBgC = colorThreeHexCode.textContent;
+    cardTwoBackground.style.backgroundColor = colorThreeBgC;
+}
+function changeCardTwoBackgroundToColorFour() {
+    let colorFourBgC = colorFourHexCode.textContent;
+    cardTwoBackground.style.backgroundColor = colorFourBgC;
+}
+function changeCardTwoBackgroundToColorFive() {
+    let colorFiveBgC = colorFiveHexCode.textContent;
+    cardTwoBackground.style.backgroundColor = colorFiveBgC;
+}
+
+
+// CARD TWO
+// CIRCLE ONE
+cardTwoCircleOne.addEventListener("click", checkIsSelectedCard2CircleOne); 
+
+function checkIsSelectedCard2CircleOne() {
+    if (isSelectedCard2Circle1) {
+        unSelectCardTwoCircleOne();
+    } else if (!isSelectedCard2Circle1) {
+        selectCardTwoCircleOne();
+    }
+}
+function selectCardTwoCircleOne() {
+    isSelectedCard2Circle1 = true
+        cardTwoCircleOne.style.border = '3px solid hsl(238, 100%, 68%)';
+        // colorOne.removeEventListener("click", checkIsSelectedColor1); 
+        colorOne.addEventListener("click", changeCardTwoCircleOneToColorOne); 
+        colorTwo.addEventListener("click", changeCardTwoCircleOneToColorTwo); 
+        colorThree.addEventListener("click", changeCardTwoCircleOneToColorThree); 
+        colorFour.addEventListener("click", changeCardTwoCircleOneToColorFour); 
+        colorFive.addEventListener("click", changeCardTwoCircleOneToColorFive); 
+        
+        
+}
+function unSelectCardTwoCircleOne() {
+    isSelectedCard2Circle1 = false
+    cardTwoCircleOne.style.border = 'none';
+    // colorOne.addEventListener("click", checkIsSelectedColor1);  
+    colorOne.removeEventListener("click", changeCardTwoCircleOneToColorOne); 
+    colorTwo.removeEventListener("click", changeCardTwoCircleOneToColorTwo); 
+    colorThree.removeEventListener("click", changeCardTwoCircleOneToColorThree); 
+    colorFour.removeEventListener("click", changeCardTwoCircleOneToColorFour); 
+    colorFive.removeEventListener("click", changeCardTwoCircleOneToColorFive); 
+}
+
+function changeCardTwoCircleOneToColorOne() {
+    let colorOneBgC = colorOneHexCode.textContent;
+    cardTwoCircleOne.style.backgroundColor = colorOneBgC;
+}
+function changeCardTwoCircleOneToColorTwo() {
+    let colorTwoBgC = colorTwoHexCode.textContent;
+    cardTwoCircleOne.style.backgroundColor = colorTwoBgC;
+}
+function changeCardTwoCircleOneToColorThree() {
+    let colorThreeBgC = colorThreeHexCode.textContent;
+    cardTwoCircleOne.style.backgroundColor = colorThreeBgC;
+}
+function changeCardTwoCircleOneToColorFour() {
+    let colorFourBgC = colorFourHexCode.textContent;
+    cardTwoCircleOne.style.backgroundColor = colorFourBgC;
+}
+function changeCardTwoCircleOneToColorFive() {
+    let colorFiveBgC = colorFiveHexCode.textContent;
+    cardTwoCircleOne.style.backgroundColor = colorFiveBgC;
+}
+
+// CARD TWO
+// CIRCLE TWO
+cardTwoCircleTwo.addEventListener("click", checkIsSelectedCard2CircleTwo); 
+
+function checkIsSelectedCard2CircleTwo() {
+    if (isSelectedCard2Circle2) {
+        unSelectCardTwoCircleTwo();
+    } else if (!isSelectedCard2Circle2) {
+        selectCardTwoCircleTwo();
+    }
+}
+function selectCardTwoCircleTwo() {
+    isSelectedCard2Circle2 = true
+        cardTwoCircleTwo.style.border = '3px solid hsl(238, 100%, 68%)';
+        // colorOne.removeEventListener("click", checkIsSelectedColor1); 
+        colorOne.addEventListener("click", changeCardTwoCircleTwoToColorOne);
+        colorTwo.addEventListener("click", changeCardTwoCircleTwoToColorTwo); 
+        colorThree.addEventListener("click", changeCardTwoCircleTwoToColorThree); 
+        colorFour.addEventListener("click", changeCardTwoCircleTwoToColorFour); 
+        colorFive.addEventListener("click", changeCardTwoCircleTwoToColorFive); 
+     
+        
+        
+}
+function unSelectCardTwoCircleTwo() {
+    isSelectedCard2Circle2 = false
+    cardTwoCircleTwo.style.border = 'none';
+    // colorOne.addEventListener("click", checkIsSelectedColor1);  
+    colorOne.removeEventListener("click", changeCardTwoCircleTwoToColorOne);
+    colorTwo.removeEventListener("click", changeCardTwoCircleTwoToColorTwo); 
+    colorThree.removeEventListener("click", changeCardTwoCircleTwoToColorThree); 
+    colorFour.removeEventListener("click", changeCardTwoCircleTwoToColorFour); 
+    colorFive.removeEventListener("click", changeCardTwoCircleTwoToColorFive);  
+}
+
+function changeCardTwoCircleTwoToColorOne() {
+    let colorOneBgC = colorOneHexCode.textContent;
+    cardTwoCircleTwo.style.backgroundColor = colorOneBgC;
+}
+function changeCardTwoCircleTwoToColorTwo() {
+    let colorTwoBgC = colorTwoHexCode.textContent;
+    cardTwoCircleTwo.style.backgroundColor = colorTwoBgC;
+}
+function changeCardTwoCircleTwoToColorThree() {
+    let colorThreeBgC = colorThreeHexCode.textContent;
+    cardTwoCircleTwo.style.backgroundColor = colorThreeBgC;
+}
+function changeCardTwoCircleTwoToColorFour() {
+    let colorFourBgC = colorFourHexCode.textContent;
+    cardTwoCircleTwo.style.backgroundColor = colorFourBgC;
+}
+function changeCardTwoCircleTwoToColorFive() {
+    let colorFiveBgC = colorFiveHexCode.textContent;
+    cardTwoCircleTwo.style.backgroundColor = colorFiveBgC;
+}
+
+// CARD TWO
+// CIRCLE THREE
+cardTwoCircleThree.addEventListener("click", checkIsSelectedCard2CircleThree); 
+
+function checkIsSelectedCard2CircleThree() {
+    if (isSelectedCard2Circle3) {
+        unSelectCardTwoCircleThree();
+    } else if (!isSelectedCard2Circle3) {
+        selectCardTwoCircleThree();
+    }
+}
+function selectCardTwoCircleThree() {
+    isSelectedCard2Circle3 = true
+        cardTwoCircleThree.style.border = '3px solid hsl(238, 100%, 68%)';
+        // colorOne.removeEventListener("click", checkIsSelectedColor1); 
+        colorOne.addEventListener("click", changeCardTwoCircleThreeToColorOne); 
+        colorTwo.addEventListener("click", changeCardTwoCircleThreeToColorTwo); 
+        colorThree.addEventListener("click", changeCardTwoCircleThreeToColorThree); 
+        colorFour.addEventListener("click", changeCardTwoCircleThreeToColorFour); 
+        colorFive.addEventListener("click", changeCardTwoCircleThreeToColorFive); 
+        
+        
+}
+function unSelectCardTwoCircleThree() {
+    isSelectedCard2Circle3 = false
+    cardTwoCircleThree.style.border = 'none';
+    // colorOne.addEventListener("click", checkIsSelectedColor1);  
+    colorOne.removeEventListener("click", changeCardTwoCircleThreeToColorOne); 
+    colorTwo.removeEventListener("click", changeCardTwoCircleThreeToColorTwo); 
+    colorThree.removeEventListener("click", changeCardTwoCircleThreeToColorThree); 
+    colorFour.removeEventListener("click", changeCardTwoCircleThreeToColorFour); 
+    colorFive.removeEventListener("click", changeCardTwoCircleThreeToColorFive); 
+}
+
+function changeCardTwoCircleThreeToColorOne() {
+    let colorOneBgC = colorOneHexCode.textContent;
+    cardTwoCircleThree.style.backgroundColor = colorOneBgC;
+}
+function changeCardTwoCircleThreeToColorTwo() {
+    let colorTwoBgC = colorTwoHexCode.textContent;
+    cardTwoCircleThree.style.backgroundColor = colorTwoBgC;
+}
+function changeCardTwoCircleThreeToColorThree() {
+    let colorThreeBgC = colorThreeHexCode.textContent;
+    cardTwoCircleThree.style.backgroundColor = colorThreeBgC;
+}
+function changeCardTwoCircleThreeToColorFour() {
+    let colorFourBgC = colorFourHexCode.textContent;
+    cardTwoCircleThree.style.backgroundColor = colorFourBgC;
+}
+function changeCardTwoCircleThreeToColorFive() {
+    let colorFiveBgC = colorFiveHexCode.textContent;
+    cardTwoCircleThree.style.backgroundColor = colorFiveBgC;
+}
+
+// CARD TWO
+// TEXT
+cardTwoText.addEventListener("click", checkIsSelectedCard2Text); 
+
+function checkIsSelectedCard2Text() {
+    if (isSelectedCard2Text) {
+        unSelectCardTwoText();
+    } else if (!isSelectedCard2Text) {
+        selectCardTwoText();
+    }
+}
+function selectCardTwoText() {
+    isSelectedCard2Text = true
+        cardTwoText.style.border = '3px solid hsl(238, 100%, 68%)';
+        // colorOne.removeEventListener("click", checkIsSelectedColor1); 
+        colorOne.addEventListener("click", changeCardTwoTextToColorOne); 
+        colorTwo.addEventListener("click", changeCardTwoTextToColorTwo); 
+        colorThree.addEventListener("click", changeCardTwoTextToColorThree); 
+        colorFour.addEventListener("click", changeCardTwoTextToColorFour); 
+        colorFive.addEventListener("click", changeCardTwoTextToColorFive); 
+        
+        
+}
+function unSelectCardTwoText() {
+    isSelectedCard2Text = false
+    cardTwoText.style.border = 'none';
+    // colorOne.addEventListener("click", checkIsSelectedColor1);  
+    colorOne.removeEventListener("click", changeCardTwoTextToColorOne); 
+    colorTwo.removeEventListener("click", changeCardTwoTextToColorTwo); 
+    colorThree.removeEventListener("click", changeCardTwoTextToColorThree); 
+    colorFour.removeEventListener("click", changeCardTwoTextToColorFour); 
+    colorFive.removeEventListener("click", changeCardTwoTextToColorFive); 
+}
+
+function changeCardTwoTextToColorOne() {
+    let colorOneBgC = colorOneHexCode.textContent;
+    cardTwoText.style.color = colorOneBgC;
+}
+function changeCardTwoTextToColorTwo() {
+    let colorTwoBgC = colorTwoHexCode.textContent;
+    cardTwoText.style.color = colorTwoBgC;
+}
+function changeCardTwoTextToColorThree() {
+    let colorThreeBgC = colorThreeHexCode.textContent;
+    cardTwoText.style.color = colorThreeBgC;
+}
+function changeCardTwoTextToColorFour() {
+    let colorFourBgC = colorFourHexCode.textContent;
+    cardTwoText.style.color = colorFourBgC;
+}
+function changeCardTwoTextToColorFive() {
+    let colorFiveBgC = colorFiveHexCode.textContent;
+    cardTwoText.style.color = colorFiveBgC;
+}
+
+// CARD TWO
+// BUTTON
+cardTwoButton.addEventListener("click", checkIsSelectedCard2Button); 
+
+function checkIsSelectedCard2Button() {
+    if (isSelectedCard2Button) {
+        unSelectCardTwoButton();
+    } else if (!isSelectedCard2Button) {
+        selectCardTwoButton();
+    }
+}
+function selectCardTwoButton() {
+    isSelectedCard2Button = true
+    cardTwoButton.style.border = '3px solid hsl(238, 100%, 68%)';
+        // colorOne.removeEventListener("click", checkIsSelectedColor1); 
+        colorOne.addEventListener("click", changeCardTwoButtonToColorOne); 
+        colorTwo.addEventListener("click", changeCardTwoButtonToColorTwo); 
+        colorThree.addEventListener("click", changeCardTwoButtonToColorThree); 
+        colorFour.addEventListener("click", changeCardTwoButtonToColorFour); 
+        colorFive.addEventListener("click", changeCardTwoButtonToColorFive); 
+        
+        
+}
+function unSelectCardTwoButton() {
+    isSelectedCard2Button = false
+    cardTwoButton.style.border = 'none';
+    // colorOne.addEventListener("click", checkIsSelectedColor1);  
+    colorOne.removeEventListener("click", changeCardTwoButtonToColorOne); 
+    colorTwo.removeEventListener("click", changeCardTwoButtonToColorTwo); 
+    colorThree.removeEventListener("click", changeCardTwoButtonToColorThree); 
+    colorFour.removeEventListener("click", changeCardTwoButtonToColorFour); 
+    colorFive.removeEventListener("click", changeCardTwoButtonToColorFive); 
+}
+
+function changeCardTwoButtonToColorOne() {
+    let colorOneBgC = colorOneHexCode.textContent;
+    cardTwoButton.style.backgroundColor = colorOneBgC;
+}
+function changeCardTwoButtonToColorTwo() {
+    let colorTwoBgC = colorTwoHexCode.textContent;
+    cardTwoButton.style.backgroundColor = colorTwoBgC;
+}
+function changeCardTwoButtonToColorThree() {
+    let colorThreeBgC = colorThreeHexCode.textContent;
+    cardTwoButton.style.backgroundColor = colorThreeBgC;
+}
+function changeCardTwoButtonToColorFour() {
+    let colorFourBgC = colorFourHexCode.textContent;
+    cardTwoButton.style.backgroundColor = colorFourBgC;
+}
+function changeCardTwoButtonToColorFive() {
+    let colorFiveBgC = colorFiveHexCode.textContent;
+    cardTwoButton.style.backgroundColor = colorFiveBgC;
+}
+
+
+
+// CARD TWO
+// BUTTON TEXT
+cardTwoButtonText.addEventListener("click", checkIsSelectedCard2ButtonText); 
+
+function checkIsSelectedCard2ButtonText() {
+    if (isSelectedCard2ButtonText) {
+        unSelectCardTwoButtonText();
+    } else if (!isSelectedCard2ButtonText) {
+        selectCardTwoButtonText();
+    }
+}
+function selectCardTwoButtonText() {
+    isSelectedCard2ButtonText = true
+    cardTwoButtonText.style.border = '3px solid hsl(238, 100%, 68%)';
+        // colorOne.removeEventListener("click", checkIsSelectedColor1); 
+        colorOne.addEventListener("click", changeCardTwoButtonTextToColorOne); 
+        colorTwo.addEventListener("click", changeCardTwoButtonTextToColorTwo); 
+        colorThree.addEventListener("click", changeCardTwoButtonTextToColorThree); 
+        colorFour.addEventListener("click", changeCardTwoButtonTextToColorFour); 
+        colorFive.addEventListener("click", changeCardTwoButtonTextToColorFive); 
+        
+        
+}
+function unSelectCardTwoButtonText() {
+    isSelectedCard2ButtonText = false
+    cardTwoButtonText.style.border = 'none';
+    // colorOne.addEventListener("click", checkIsSelectedColor1);  
+    colorOne.removeEventListener("click", changeCardTwoButtonTextToColorOne); 
+    colorTwo.removeEventListener("click", changeCardTwoButtonTextToColorTwo); 
+    colorThree.removeEventListener("click", changeCardTwoButtonTextToColorThree); 
+    colorFour.removeEventListener("click", changeCardTwoButtonTextToColorFour); 
+    colorFive.removeEventListener("click", changeCardTwoButtonTextToColorFive); 
+}
+
+function changeCardTwoButtonTextToColorOne() {
+    let colorOneBgC = colorOneHexCode.textContent;
+    cardTwoButtonText.style.color = colorOneBgC;
+}
+function changeCardTwoButtonTextToColorTwo() {
+    let colorTwoBgC = colorTwoHexCode.textContent;
+    cardTwoButtonText.style.color = colorTwoBgC;
+}
+function changeCardTwoButtonTextToColorThree() {
+    let colorThreeBgC = colorThreeHexCode.textContent;
+    cardTwoButtonText.style.color = colorThreeBgC;
+}
+function changeCardTwoButtonTextToColorFour() {
+    let colorFourBgC = colorFourHexCode.textContent;
+    cardTwoButtonText.style.color = colorFourBgC;
+}
+function changeCardTwoButtonTextToColorFive() {
+    let colorFiveBgC = colorFiveHexCode.textContent;
+    cardTwoButtonText.style.color = colorFiveBgC;
+}
+
 
 
 
