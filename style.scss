@@ -290,7 +290,6 @@ main {
                         transform: translate(-50%, -50%);
                         width: 120px;
                         height: 40px;
-                        background-color: $white;
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
@@ -301,7 +300,6 @@ main {
                         top: 82%;
                         left: 50%;
                         transform: translate(-50%, -50%);
-                        color: $black;
                         font-family: "Open Sans";
                         font-size: .9rem;
                         font-weight: 600;
@@ -327,9 +325,11 @@ main {
                         h4{
                             color: $white;
                         }
-                        button {
-                            color: $black;
+                        .button {
                             background-color: $white;
+                        }
+                        p{
+                            color: $black;
                         }
                     }
 
@@ -350,9 +350,11 @@ main {
                         h4{
                             color: $black;
                         }
-                        button {
-                            color: $white;
+                        .button {
                             background-color: $black;
+                        }
+                        p{
+                            color: $white;
                         }
                     }
                     &.card3{
@@ -372,9 +374,11 @@ main {
                         h4{
                             color: $black;
                         }
-                        button {
-                            color: $white;
+                        .button {
                             background-color: $gray1;
+                        }
+                        p{
+                            color: $white;
                         }
                     }
                     &.card4{
@@ -394,9 +398,12 @@ main {
                         h4{
                             color: $white;
                         }
-                        button {
+                        .button {
                             color: $black;
                             background-color: $gray2;
+                        }
+                        p{
+                            color: $black;
                         }
                     }
                 }

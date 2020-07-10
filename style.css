@@ -375,7 +375,6 @@ main section.palette-cards .cards__container .card .button {
           transform: translate(-50%, -50%);
   width: 120px;
   height: 40px;
-  background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -397,7 +396,6 @@ main section.palette-cards .cards__container .card p {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: #000000;
   font-family: "Open Sans";
   font-size: .9rem;
   font-weight: 600;
@@ -429,9 +427,12 @@ main section.palette-cards .cards__container .card.card1 h4 {
   color: #ffffff;
 }
 
-main section.palette-cards .cards__container .card.card1 button {
-  color: #000000;
+main section.palette-cards .cards__container .card.card1 .button {
   background-color: #ffffff;
+}
+
+main section.palette-cards .cards__container .card.card1 p {
+  color: #000000;
 }
 
 main section.palette-cards .cards__container .card.card2 .background {
@@ -456,9 +457,12 @@ main section.palette-cards .cards__container .card.card2 h4 {
   color: #000000;
 }
 
-main section.palette-cards .cards__container .card.card2 button {
-  color: #ffffff;
+main section.palette-cards .cards__container .card.card2 .button {
   background-color: #000000;
+}
+
+main section.palette-cards .cards__container .card.card2 p {
+  color: #ffffff;
 }
 
 main section.palette-cards .cards__container .card.card3 .background {
@@ -483,9 +487,12 @@ main section.palette-cards .cards__container .card.card3 h4 {
   color: #000000;
 }
 
-main section.palette-cards .cards__container .card.card3 button {
-  color: #ffffff;
+main section.palette-cards .cards__container .card.card3 .button {
   background-color: #505050;
+}
+
+main section.palette-cards .cards__container .card.card3 p {
+  color: #ffffff;
 }
 
 main section.palette-cards .cards__container .card.card4 .background {
@@ -510,8 +517,12 @@ main section.palette-cards .cards__container .card.card4 h4 {
   color: #ffffff;
 }
 
-main section.palette-cards .cards__container .card.card4 button {
+main section.palette-cards .cards__container .card.card4 .button {
   color: #000000;
   background-color: #a1a1a1;
+}
+
+main section.palette-cards .cards__container .card.card4 p {
+  color: #000000;
 }
 /*# sourceMappingURL=style.css.map */
