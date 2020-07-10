@@ -12,16 +12,16 @@
             <div class="form-container">
                 <form>
                     <label for="hue" class="hueText">Hue</label>
-                    <input type="range" min="0" max="360" step="1" value="60" id="hue" name="hue">
+                    <input type="range" min="0" max="360" step="1" value="40" id="hue" name="hue">
           
                     <label for="saturation" class="saturationText">Saturation</label>
                     <input type="range" min="0" max="100" step="1" value="72" id="saturation" name="saturation">
           
-                    <label for="brightness" class="brightnessText">Brightness</label>
-                    <input type="range" min="0" max="100" step="1" value="80" id="brightness" name="brightness">
+                    <label for="brightness" class="brightnessText">Luminosity</label>
+                    <input type="range" min="0" max="100" step="1" value="56" id="brightness" name="brightness">
                 </form>
                 <div class="output">
-                     <h3>hsl(<span onkeypress="return (this.innerText.length <= 2)" contenteditable="true" class="hueValue">60</span>&deg;, <span onkeypress="return (this.innerText.length <= 2)" contenteditable="true" class="saturationValue">72</span>%, <span onkeypress="return (this.innerText.length <= 2)" contenteditable="true" class="brightnessValue">80</span>%)</h3> 
+                     <h3>hsl(<span onkeypress="return (this.innerText.length <= 2)" contenteditable="true" class="hueValue">40</span>&deg;, <span onkeypress="return (this.innerText.length <= 2)" contenteditable="true" class="saturationValue">72</span>%, <span onkeypress="return (this.innerText.length <= 2)" contenteditable="true" class="brightnessValue">56</span>%)</h3> 
                      
                      <!-- onkeypress="return (this.innerText.length <= 2)" -->
                 </div>
@@ -38,7 +38,7 @@
                     
                     <div class="color-container">
                         <div class="color2 color"></div>
-                        <p onkeypress="return (this.innerText.length <= 6)" contenteditable="true">#A1A1A1</p>
+                        <p onkeypress="return (this.innerText.length <= 6)" contenteditable="true">#B5B5B5</p>
                     </div>
                     <div class="color-container">
                         <div class="color3 color"></div>
@@ -52,11 +52,15 @@
                         <div class="color5 color"></div>
                         <p onkeypress="return (this.innerText.length <= 6)" contenteditable="true">#FFFFFF</p>
                     </div>
+
+                    <h2>Your Palette</h2>
+                    <img src="./lock-icon.svg" alt="lock icon" title="lock palette">
                 </div>
             </div>
             <div class="cards">
                 <div class="cards__container">
                     <div class="card1 card">
+                        <h3>Primary/<br>Dominant</h3>
                         <div class="background"></div>
                         <div class="circle1"></div>
                         <div class="circle2"></div>
@@ -66,6 +70,7 @@
                         <p>Click here</p>
                     </div>
                     <div class="card2 card">
+                        <h3>Secondary/<br>Complementary</h3>
                         <div class="background"></div>
                         <div class="circle1"></div>
                         <div class="circle2"></div>
@@ -75,6 +80,7 @@
                         <p>Click here</p>
                     </div>
                     <div class="card3 card">
+                        <h3>Light</h3>
                         <div class="background"></div>
                         <div class="circle1"></div>
                         <div class="circle2"></div>
@@ -84,6 +90,7 @@
                         <p>Click here</p>
                     </div>
                     <div class="card4 card">
+                        <h3>Dark</h3>
                         <div class="background"></div>
                         <div class="circle1"></div>
                         <div class="circle2"></div>

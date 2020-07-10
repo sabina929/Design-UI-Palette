@@ -1,5 +1,6 @@
 $gray1: #505050;
-$gray2: #a1a1a1;
+// $gray2: #a1a1a1;
+$gray2: #B5B5B5;
 $gray3: #666666;
 $black: #000000;
 $white: #ffffff;
@@ -13,7 +14,7 @@ body{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
 }
 main {
     width: 100vw;
@@ -68,10 +69,10 @@ main {
                     width: 400px;
                     background: rgba(255, 255, 255, 0.5);
                     &#hue{
-                        background: linear-gradient(90deg, red, orange, yellow, rgb(0, 255, 0), cyan, blue, rgb(255, 0, 255), red);  
+                        background: linear-gradient(90deg, red,yellow, rgb(0, 255, 0), cyan, blue, rgb(255, 0, 255), red);  
                     }
                     &#saturation{
-                        background: linear-gradient(90deg, white, orange);  
+                        background: linear-gradient(90deg, white, hsl(40, 100%, 50%));  
                     }
                     &#brightness{
                         background: linear-gradient(90deg, black, white);  
@@ -155,6 +156,7 @@ main {
                 align-items: center;
                 // border: 1px solid red;
                 padding: 10px;
+                position: relative;
 
                 .color-container{
                     display: flex;
@@ -197,9 +199,49 @@ main {
                         }
                     }
                 }
+
+
+                h2{
+                    position: absolute;
+                    top: -30px;
+                    left: 20%;
+                    transform: translate(-50%, -50%);
+                    letter-spacing: -.2px;
+                }
+                
+
+                img{
+                    position: absolute;
+                    top: -30px;
+                    right: 5px;
+                    transform: translate(-50%, -50%);
+                    opacity: .3;
+                    cursor: pointer;
+                    transition: all .1s ease;
+                }
                 
             }
         }
+
+        // .input-color-container {
+        //     position: relative;
+        //     overflow: hidden;
+        //     width: 40px;
+        //     height: 40px;
+        //     border: solid 2px #ddd;
+        //     border-radius: 40px;
+        //   }
+          
+        //   .input-color {
+        //     position: absolute;
+        //     right: -8px;
+        //     top: -8px;
+        //     width: 56px;
+        //     height: 56px;
+        //     border: none;
+        //   }
+          
+         
         .cards{
             width: 71%;
             height: 100%;
@@ -231,6 +273,25 @@ main {
                     // align-items: center;
                     // border: 1px solid cyan;
                     position: relative;
+                    h3{
+                        position: absolute;
+                        top: -40px;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: .96rem;
+                        font-weight: 500;
+                        text-align: center;
+                        opacity: 1;
+                        letter-spacing: 0px;
+                        // width: 50%;
+                        // height: auto;
+                        // word-wrap: break-word;
+                        // border: 1px solid red;
+                        -webkit-user-select: none; 
+                        -ms-user-select: none; 
+                        user-select: none; 
+                    }
+                    
 
                     .background{
                         position: absolute;
