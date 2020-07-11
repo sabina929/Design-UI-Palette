@@ -1,3 +1,31 @@
+@-webkit-keyframes moveUp {
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes moveUp {
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@-webkit-keyframes moveDown {
+  100% {
+    -webkit-transform: translate(-50%, 64%);
+            transform: translate(-50%, 64%);
+  }
+}
+
+@keyframes moveDown {
+  100% {
+    -webkit-transform: translate(-50%, 64%);
+            transform: translate(-50%, 64%);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -29,6 +57,48 @@ main {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px;
+}
+
+main img.move-tool, main img.color-picker {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+main img.move-tool {
+  top: 40px;
+  right: 29.5px;
+  width: 16px;
+  height: auto;
+}
+
+main img.color-picker {
+  top: 82px;
+  right: 24px;
+  width: 21px;
+  height: auto;
+}
+
+main .indicator {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #B5B5B5;
+}
+
+main .indicator.moveUp {
+  -webkit-animation: moveUp .3s ease .1s forwards;
+          animation: moveUp .3s ease .1s forwards;
+}
+
+main .indicator.moveDown {
+  -webkit-animation: moveDown .01s linear .1s forwards;
+          animation: moveDown .01s linear .1s forwards;
 }
 
 main section.hsl-ranges {

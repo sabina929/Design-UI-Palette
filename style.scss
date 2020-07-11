@@ -5,6 +5,19 @@ $gray3: #666666;
 $black: #000000;
 $white: #ffffff;
 
+@keyframes moveUp{
+    
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+@keyframes moveDown{
+    
+    100% {
+        transform: translate(-50%, 64%);
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -24,6 +37,42 @@ main {
     justify-content: center;
     align-items: center;
     padding: 10px;
+    
+    img.move-tool, img.color-picker {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+    }
+    img.move-tool {
+        top: 40px;
+        right: 29.5px;
+        width: 16px;
+        height: auto;
+           
+    }
+    img.color-picker {
+        top: 82px;
+        right: 24px;
+        width: 21px;
+        height: auto;
+    }
+    .indicator{
+        position: absolute;
+        top: 40px;
+        right: 10px;
+        width: 36px;
+        height: 36px;
+        transform: translate(-50%, -50%);
+        background-color: $gray2;
+
+        &.moveUp{
+            animation: moveUp .3s ease .1s forwards;
+        }
+        &.moveDown{
+            animation: moveDown .01s linear .1s forwards;
+        }
+    }
+
 
     section.hsl-ranges {
     width: 100%;
@@ -144,6 +193,7 @@ main {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            
             
             &__container{
                 width: 420px;

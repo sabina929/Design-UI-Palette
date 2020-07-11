@@ -2050,13 +2050,63 @@ function changeCardFourButtonTextToColorFive() {
 
 
 
+// HANDLE MOVE AND COLOR PICKER SELECTION 
+const selectionIndicator = document.querySelector('.indicator')
+const moveTool = document.querySelector('.move-tool')
+const colorPicker = document.querySelector('.color-picker')
 
 
+moveTool.addEventListener('click', selectMoveTool)
+colorPicker.addEventListener('click', selectColorPicker)
+function selectMoveTool() {
+    selectionIndicator.classList.remove('moveDown');
+    selectionIndicator.classList.toggle('moveUp');
+
+    lockIcon.style.opacity = ".3"
+    lockIcon.title = "lock palette"
+    isColorsLocked = false
+
+        
+    colorOne.addEventListener("click", checkIsSelectedColor1); 
+    colorTwo.addEventListener("click", checkIsSelectedColor2); 
+    colorThree.addEventListener("click", checkIsSelectedColor3); 
+    colorFour.addEventListener("click", checkIsSelectedColor4); 
+    colorFive.addEventListener("click", checkIsSelectedColor5);
+
+    colorOneHexCode.contentEditable = true
+    colorTwoHexCode.contentEditable = true
+    colorThreeHexCode.contentEditable = true
+    colorFourHexCode.contentEditable = true
+    colorFiveHexCode.contentEditable = true
+}
+function selectColorPicker() {
+    selectionIndicator.classList.remove('moveUp');
+    selectionIndicator.classList.add('moveDown');
+    
+ 
+    isColorsLocked = true;
+    lockIcon.style.opacity = "1"
+   lockIcon.title = "unlock palette"
+
+   colorOne.removeEventListener("click", checkIsSelectedColor1); 
+   colorTwo.removeEventListener("click", checkIsSelectedColor2); 
+   colorThree.removeEventListener("click", checkIsSelectedColor3); 
+   colorFour.removeEventListener("click", checkIsSelectedColor4); 
+   colorFive.removeEventListener("click", checkIsSelectedColor5); 
+
+   unSelectColorOne()
+   unSelectColorTwo()
+   unSelectColorThree()
+   unSelectColorFour()
+   unSelectColorFive()
 
 
-
-
-
+   colorOneHexCode.contentEditable = false
+   colorTwoHexCode.contentEditable = false
+   colorThreeHexCode.contentEditable = false
+   colorFourHexCode.contentEditable = false
+   colorFiveHexCode.contentEditable = false
+}
 
 
 // PALETTE LOCKING
@@ -2106,6 +2156,8 @@ function lockColors() {
 
 }
 function unLockColors() {
+
+    selectMoveTool()
     lockIcon.style.opacity = ".3"
     lockIcon.title = "lock palette"
     isColorsLocked = false
