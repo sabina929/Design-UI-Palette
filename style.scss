@@ -29,6 +29,17 @@ body{
     overflow: hidden;
     font-family: "Open Sans", sans-serif;
 }
+// html {
+//     cursor: none;
+//   }
+.tracker {
+    width: 21px;
+        height: auto;
+    opacity: 0;
+    position: absolute;
+    z-index: 99999;
+    pointer-events: none;
+}
 main {
     width: 100vw;
     height: 100vh;
