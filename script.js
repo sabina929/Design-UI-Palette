@@ -67,7 +67,7 @@ const inputBrightness = document.querySelector("#brightness");
 // console.log(inputHue.value, inputSaturation.value, inputBrightness.value)
 
 // PALETTE
-const lockIcon = document.querySelector(".palette__container img");
+// const lockIcon = document.querySelector(".palette__container img");
 
 const colorOne = document.querySelector(".color.color1");
 const colorTwo = document.querySelector(".color.color2");
@@ -139,7 +139,8 @@ function checkIsSelectedColor1() {
 }
 function selectColorOne() {
     isSelectedColor1 = true
-        colorOne.style.border = '3px solid hsl(238, 100%, 68%)';
+        // colorOne.style.border = '3px solid hsl(238, 100%, 68%)';
+        colorOne.style.border = '3px solid rgb(255, 181, 84)';
         
         let inputColorOneHexCode = colorOneHexCode.textContent;
         let hslColor = hexToHsl(inputColorOneHexCode)
@@ -169,7 +170,8 @@ function checkIsSelectedColor2() {
 }
 function selectColorTwo() {
     isSelectedColor2 = true
-        colorTwo.style.border = '3px solid hsl(238, 100%, 68%)';
+        // colorTwo.style.border = '3px solid hsl(238, 100%, 68%)';
+        colorTwo.style.border = '3px solid rgb(255, 181, 84)';
 
         let inputColorTwoHexCode = colorTwoHexCode.textContent;
         let hslColor = hexToHsl(inputColorTwoHexCode)
@@ -199,7 +201,8 @@ function checkIsSelectedColor3() {
 }
 function selectColorThree() {
     isSelectedColor3 = true
-        colorThree.style.border = '3px solid hsl(238, 100%, 68%)';
+        // colorThree.style.border = '3px solid hsl(238, 100%, 68%)';
+        colorThree.style.border = '3px solid rgb(255, 181, 84)';
 
         let inputColorThreeHexCode = colorThreeHexCode.textContent;
         let hslColor = hexToHsl(inputColorThreeHexCode)
@@ -229,7 +232,8 @@ function checkIsSelectedColor4() {
 }
 function selectColorFour() {
     isSelectedColor4 = true
-        colorFour.style.border = '3px solid hsl(238, 100%, 68%)';
+        // colorFour.style.border = '3px solid hsl(238, 100%, 68%)';
+        colorFour.style.border = '3px solid rgb(255, 181, 84)';
 
         let inputColorFourHexCode = colorFourHexCode.textContent;
         let hslColor = hexToHsl(inputColorFourHexCode)
@@ -259,7 +263,8 @@ function checkIsSelectedColor5() {
 }
 function selectColorFive() {
     isSelectedColor5 = true
-        colorFive.style.border = '3px solid hsl(238, 100%, 68%)';
+        // colorFive.style.border = '3px solid hsl(238, 100%, 68%)';
+        colorFive.style.border = '3px solid rgb(255, 181, 84)';
 
         let inputColorFiveHexCode = colorFiveHexCode.textContent;
         let hslColor = hexToHsl(inputColorFiveHexCode)
@@ -2440,34 +2445,22 @@ colorPicker.addEventListener("click", checkIsColorPickerSelected);
 function checkIsColorPickerSelected() {
     
         // colorPicker.removeEventListener('click', selectColorPicker)
-        console.log('checked')
+        // console.log('checked')
         if(isSelectedCard1Background || isSelectedCard2Background || isSelectedCard3Background || isSelectedCard4Background || isSelectedCard1Circle1 || isSelectedCard2Circle1 || isSelectedCard3Circle1 || isSelectedCard4Circle1 || isSelectedCard1Circle2 || isSelectedCard2Circle2 || isSelectedCard3Circle2 || isSelectedCard4Circle2 || isSelectedCard1Circle3 || isSelectedCard2Circle3 || isSelectedCard3Circle3 || isSelectedCard4Circle3 || isSelectedCard1Text || isSelectedCard2Text || isSelectedCard3Text || isSelectedCard4Text || isSelectedCard1Button || isSelectedCard2Button || isSelectedCard3Button || isSelectedCard4Button || isSelectedCard1ButtonText || isSelectedCard2ButtonText || isSelectedCard3ButtonText || isSelectedCard4ButtonText)
         {
-            
-            
             selectColorPicker()
             // console.log('executed selectColorPicker()')
-            
-            
-            
             
         }
         else if(!isSelectedCard1Background && !isSelectedCard2Background && !isSelectedCard3Background && !isSelectedCard4Background && !isSelectedCard1Circle1 && !isSelectedCard2Circle1 && !isSelectedCard3Circle1 && !isSelectedCard4Circle1 && !isSelectedCard1Circle2 && !isSelectedCard2Circle2 && !isSelectedCard3Circle2 && !isSelectedCard4Circle2 && !isSelectedCard1Circle3 && !isSelectedCard2Circle3 && !isSelectedCard3Circle3 && !isSelectedCard4Circle3 && !isSelectedCard1Text && !isSelectedCard2Text && !isSelectedCard3Text && !isSelectedCard4Text && !isSelectedCard1Button && !isSelectedCard2Button && !isSelectedCard3Button && !isSelectedCard4Button  && !isSelectedCard1ButtonText && !isSelectedCard2ButtonText && !isSelectedCard3ButtonText && !isSelectedCard4ButtonText) {
             selectMoveTool()
-
-            // window.removeEventListener("keydown", keyCodeForI);
-            
         }
-        
-
-        
-    
 }
 
 
 window.addEventListener("keydown", checkKeyCode);
 function checkKeyCode(event) {
-    console.log("key event fired")
+    // console.log("key event fired")
     let x = event.charCode || event.keyCode;
     if (isSelectedCard1Background || isSelectedCard2Background || isSelectedCard3Background || isSelectedCard4Background || isSelectedCard1Circle1 || isSelectedCard2Circle1 || isSelectedCard3Circle1 || isSelectedCard4Circle1 || isSelectedCard1Circle2 || isSelectedCard2Circle2 || isSelectedCard3Circle2 || isSelectedCard4Circle2 || isSelectedCard1Circle3 || isSelectedCard2Circle3 || isSelectedCard3Circle3 || isSelectedCard4Circle3 || isSelectedCard1Text || isSelectedCard2Text || isSelectedCard3Text || isSelectedCard4Text || isSelectedCard1Button || isSelectedCard2Button || isSelectedCard3Button || isSelectedCard4Button || isSelectedCard1ButtonText || isSelectedCard2ButtonText || isSelectedCard3ButtonText || isSelectedCard4ButtonText) {
         if (x == 73) {
@@ -2502,9 +2495,9 @@ moveTool.addEventListener('click', selectMoveTool)
 
 // colorPicker.addEventListener('click', selectColorPicker)
 function selectMoveTool() {
-    console.log("move tool selected")
+    // console.log("move tool selected")
     isColorPickerSelected = false;
-    console.log("isColorPickerSelected: ",isColorPickerSelected)
+    // console.log("isColorPickerSelected: ",isColorPickerSelected)
 
     selectionIndicator.classList.remove('moveDown');
     selectionIndicator.classList.add('moveUp');
@@ -2515,8 +2508,9 @@ function selectMoveTool() {
       })
 
 
-    lockIcon.style.opacity = ".3"
-    lockIcon.title = "The palette is unlocked"
+    // lockIcon.style.opacity = ".3"
+    // lockIcon.title = "The palette is unlocked"
+
     isColorsLocked = false
 
         
@@ -2580,10 +2574,10 @@ function selectMoveTool() {
    cardFourButtonText.addEventListener("click", checkIsSelectedCard4ButtonText); 
 }
 function selectColorPicker() {
-    console.log("picker tool selected")
+    // console.log("picker tool selected")
     // console.log("clicked picker icon")
     isColorPickerSelected = true;
-    console.log("isColorPickerSelected: ",isColorPickerSelected)
+    // console.log("isColorPickerSelected: ",isColorPickerSelected)
 
     // console.log(isColorPickerSelected)
     selectionIndicator.classList.remove('moveUp');
@@ -2594,9 +2588,12 @@ function selectColorPicker() {
         tracker.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px; opacity: 1")
       })
  
-    isColorsLocked = true;
-    lockIcon.style.opacity = "1"
-   lockIcon.title = "The palette is locked"
+      
+      //     lockIcon.style.opacity = "1"
+      //    lockIcon.title = "The palette is locked"
+      
+      isColorsLocked = true;
+
 
    colorOne.removeEventListener("click", checkIsSelectedColor1); 
    colorTwo.removeEventListener("click", checkIsSelectedColor2); 
@@ -2683,8 +2680,8 @@ function selectColorPicker() {
 
 
 function lockColors() {
-   lockIcon.style.opacity = "1"
-   lockIcon.title = "The palette is locked"
+//    lockIcon.style.opacity = "1"
+//    lockIcon.title = "The palette is locked"
 
    isColorsLocked = true;
    colorOne.removeEventListener("click", checkIsSelectedColor1); 
@@ -2716,8 +2713,10 @@ function lockColors() {
 function unLockColors() {
 
     // selectMoveTool()
-    lockIcon.style.opacity = ".3"
-    lockIcon.title = "The palette is unlocked"
+    
+    // lockIcon.style.opacity = ".3"
+    // lockIcon.title = "The palette is unlocked"
+    
     isColorsLocked = false
 
         
