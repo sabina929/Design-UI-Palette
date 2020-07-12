@@ -1,6 +1,9 @@
 // COLOR PICKER
 let isColorPickerSelected = false
 
+// PALETTE LOCKING
+let isColorsLocked = false
+
 // COLORS
 let isSelectedColor1 = false;
 let isSelectedColor2 = false;
@@ -2440,6 +2443,14 @@ function checkIsColorPickerSelected() {
         console.log('checked')
         if(isSelectedCard1Background || isSelectedCard2Background || isSelectedCard3Background || isSelectedCard4Background || isSelectedCard1Circle1 || isSelectedCard2Circle1 || isSelectedCard3Circle1 || isSelectedCard4Circle1 || isSelectedCard1Circle2 || isSelectedCard2Circle2 || isSelectedCard3Circle2 || isSelectedCard4Circle2 || isSelectedCard1Circle3 || isSelectedCard2Circle3 || isSelectedCard3Circle3 || isSelectedCard4Circle3 || isSelectedCard1Text || isSelectedCard2Text || isSelectedCard3Text || isSelectedCard4Text || isSelectedCard1Button || isSelectedCard2Button || isSelectedCard3Button || isSelectedCard4Button || isSelectedCard1ButtonText || isSelectedCard2ButtonText || isSelectedCard3ButtonText || isSelectedCard4ButtonText)
         {
+            window.addEventListener("keydown", keyCodeForI);
+            function keyCodeForI(event) {
+                let x = event.charCode || event.keyCode;
+                if (x == 73) {
+
+                    selectColorPicker()
+                } 
+            }
             selectColorPicker()
             console.log('executed selectColorPicker()')
 
@@ -2467,6 +2478,16 @@ function checkIsColorPickerSelected() {
 // HANDLE MOVE AND COLOR PICKER SELECTION 
 
 moveTool.addEventListener('click', selectMoveTool)
+// moveTool.addEventListener('keypress', selectMoveTool)
+window.addEventListener("keydown", keyCodeForV);
+function keyCodeForV(event) {
+    let x = event.charCode || event.keyCode;
+  if (x == 86){
+        // alert ("You pressed the V/v key!");
+        selectMoveTool()
+    }
+  }
+
 // colorPicker.addEventListener('click', selectColorPicker)
 function selectMoveTool() {
     
@@ -2617,9 +2638,9 @@ function selectColorPicker() {
 
 
 // PALETTE LOCKING
-let isColorsLocked = false
 
-lockIcon.addEventListener('click', checkIsColorsLocked)
+
+// lockIcon.addEventListener('click', checkIsColorsLocked)
 
 
 function checkIsColorsLocked() {

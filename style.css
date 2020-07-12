@@ -355,7 +355,6 @@ main section.palette-cards .palette__container img {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   opacity: .3;
-  cursor: pointer;
   -webkit-transition: all .1s ease;
   transition: all .1s ease;
 }
