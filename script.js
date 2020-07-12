@@ -2434,7 +2434,7 @@ function changeCardFourButtonTextToColorFive() {
     }
 }
 
-
+// HANDLE MOVE AND COLOR PICKER SELECTION 
 colorPicker.addEventListener("click", checkIsColorPickerSelected); 
 
 function checkIsColorPickerSelected() {
@@ -2443,56 +2443,68 @@ function checkIsColorPickerSelected() {
         console.log('checked')
         if(isSelectedCard1Background || isSelectedCard2Background || isSelectedCard3Background || isSelectedCard4Background || isSelectedCard1Circle1 || isSelectedCard2Circle1 || isSelectedCard3Circle1 || isSelectedCard4Circle1 || isSelectedCard1Circle2 || isSelectedCard2Circle2 || isSelectedCard3Circle2 || isSelectedCard4Circle2 || isSelectedCard1Circle3 || isSelectedCard2Circle3 || isSelectedCard3Circle3 || isSelectedCard4Circle3 || isSelectedCard1Text || isSelectedCard2Text || isSelectedCard3Text || isSelectedCard4Text || isSelectedCard1Button || isSelectedCard2Button || isSelectedCard3Button || isSelectedCard4Button || isSelectedCard1ButtonText || isSelectedCard2ButtonText || isSelectedCard3ButtonText || isSelectedCard4ButtonText)
         {
-            window.addEventListener("keydown", keyCodeForI);
-            function keyCodeForI(event) {
-                let x = event.charCode || event.keyCode;
-                if (x == 73) {
-
-                    selectColorPicker()
-                } 
-            }
+            
+            
             selectColorPicker()
-            console.log('executed selectColorPicker()')
-
-
-         
-
+            // console.log('executed selectColorPicker()')
+            
+            
+            
+            
         }
         else if(!isSelectedCard1Background && !isSelectedCard2Background && !isSelectedCard3Background && !isSelectedCard4Background && !isSelectedCard1Circle1 && !isSelectedCard2Circle1 && !isSelectedCard3Circle1 && !isSelectedCard4Circle1 && !isSelectedCard1Circle2 && !isSelectedCard2Circle2 && !isSelectedCard3Circle2 && !isSelectedCard4Circle2 && !isSelectedCard1Circle3 && !isSelectedCard2Circle3 && !isSelectedCard3Circle3 && !isSelectedCard4Circle3 && !isSelectedCard1Text && !isSelectedCard2Text && !isSelectedCard3Text && !isSelectedCard4Text && !isSelectedCard1Button && !isSelectedCard2Button && !isSelectedCard3Button && !isSelectedCard4Button  && !isSelectedCard1ButtonText && !isSelectedCard2ButtonText && !isSelectedCard3ButtonText && !isSelectedCard4ButtonText) {
             selectMoveTool()
 
-                
+            // window.removeEventListener("keydown", keyCodeForI);
+            
         }
         
 
+        
     
-    
+}
+
+
+window.addEventListener("keydown", checkKeyCode);
+function checkKeyCode(event) {
+    console.log("key event fired")
+    let x = event.charCode || event.keyCode;
+    if (isSelectedCard1Background || isSelectedCard2Background || isSelectedCard3Background || isSelectedCard4Background || isSelectedCard1Circle1 || isSelectedCard2Circle1 || isSelectedCard3Circle1 || isSelectedCard4Circle1 || isSelectedCard1Circle2 || isSelectedCard2Circle2 || isSelectedCard3Circle2 || isSelectedCard4Circle2 || isSelectedCard1Circle3 || isSelectedCard2Circle3 || isSelectedCard3Circle3 || isSelectedCard4Circle3 || isSelectedCard1Text || isSelectedCard2Text || isSelectedCard3Text || isSelectedCard4Text || isSelectedCard1Button || isSelectedCard2Button || isSelectedCard3Button || isSelectedCard4Button || isSelectedCard1ButtonText || isSelectedCard2ButtonText || isSelectedCard3ButtonText || isSelectedCard4ButtonText) {
+        if (x == 73) {
+            selectColorPicker()
+        }
+        else if (x == 86) {
+            selectMoveTool()
+        }
+
+    } else if(!isSelectedCard1Background && !isSelectedCard2Background && !isSelectedCard3Background && !isSelectedCard4Background && !isSelectedCard1Circle1 && !isSelectedCard2Circle1 && !isSelectedCard3Circle1 && !isSelectedCard4Circle1 && !isSelectedCard1Circle2 && !isSelectedCard2Circle2 && !isSelectedCard3Circle2 && !isSelectedCard4Circle2 && !isSelectedCard1Circle3 && !isSelectedCard2Circle3 && !isSelectedCard3Circle3 && !isSelectedCard4Circle3 && !isSelectedCard1Text && !isSelectedCard2Text && !isSelectedCard3Text && !isSelectedCard4Text && !isSelectedCard1Button && !isSelectedCard2Button && !isSelectedCard3Button && !isSelectedCard4Button  && !isSelectedCard1ButtonText && !isSelectedCard2ButtonText && !isSelectedCard3ButtonText && !isSelectedCard4ButtonText) {
+            selectMoveTool()
+                
+    }
 }
 
 
 
 
 
-
-
-// HANDLE MOVE AND COLOR PICKER SELECTION 
-
 moveTool.addEventListener('click', selectMoveTool)
 // moveTool.addEventListener('keypress', selectMoveTool)
-window.addEventListener("keydown", keyCodeForV);
-function keyCodeForV(event) {
-    let x = event.charCode || event.keyCode;
-  if (x == 86){
-        // alert ("You pressed the V/v key!");
-        selectMoveTool()
-    }
-  }
+// window.addEventListener("keydown", keyCodeForV);
+// function keyCodeForV(event) {
+//     console.log("v event fired")
+//     let x = event.charCode || event.keyCode;
+//   if (x == 86){
+//         // alert ("You pressed the V/v key!");
+//         selectMoveTool()
+//         // console.log("move selected")
+//     }
+//   }
 
 // colorPicker.addEventListener('click', selectColorPicker)
 function selectMoveTool() {
-    
+    console.log("move tool selected")
     isColorPickerSelected = false;
-    console.log(isColorPickerSelected)
+    console.log("isColorPickerSelected: ",isColorPickerSelected)
 
     selectionIndicator.classList.remove('moveDown');
     selectionIndicator.classList.add('moveUp');
@@ -2559,10 +2571,10 @@ function selectMoveTool() {
    cardFourButtonText.addEventListener("click", checkIsSelectedCard4ButtonText); 
 }
 function selectColorPicker() {
-
-    console.log("clicked picker icon")
+    console.log("picker tool selected")
+    // console.log("clicked picker icon")
     isColorPickerSelected = true;
-    console.log(isColorPickerSelected)
+    console.log("isColorPickerSelected: ",isColorPickerSelected)
 
     // console.log(isColorPickerSelected)
     selectionIndicator.classList.remove('moveUp');
