@@ -1,3 +1,6 @@
+// COLOR PICKER
+let isColorPickerSelected = false
+
 // COLORS
 let isSelectedColor1 = false;
 let isSelectedColor2 = false;
@@ -500,27 +503,25 @@ function selectCardOneBackground() {
     isSelectedCard1Background = true
         cardOneBackground.style.border = '3px solid hsl(238, 100%, 68%)';
         // colorOne.removeEventListener("click", checkIsSelectedColor1); 
-        colorOne.addEventListener("click", changeCardOneBackgroundToColorOne); 
-        colorTwo.addEventListener("click", changeCardOneBackgroundToColorTwo); 
-        colorThree.addEventListener("click", changeCardOneBackgroundToColorThree); 
-        colorFour.addEventListener("click", changeCardOneBackgroundToColorFour); 
-        colorFive.addEventListener("click", changeCardOneBackgroundToColorFive); 
 
-        colorPicker.addEventListener('click', selectColorPicker)
+        // colorPicker.addEventListener('click', selectColorPicker)
+
+        console.log(isColorPickerSelected)
         
-}
+    }
+
 
 function unSelectCardOneBackground() {
     isSelectedCard1Background = false
     cardOneBackground.style.border = 'none';
     // colorOne.addEventListener("click", checkIsSelectedColor1);  
-    colorOne.removeEventListener("click", changeCardOneBackgroundToColorOne); 
-    colorTwo.removeEventListener("click", changeCardOneBackgroundToColorTwo); 
-    colorThree.removeEventListener("click", changeCardOneBackgroundToColorThree); 
-    colorFour.removeEventListener("click", changeCardOneBackgroundToColorFour); 
-    colorFive.removeEventListener("click", changeCardOneBackgroundToColorFive); 
+    // colorOne.removeEventListener("click", changeCardOneBackgroundToColorOne); 
+    // colorTwo.removeEventListener("click", changeCardOneBackgroundToColorTwo); 
+    // colorThree.removeEventListener("click", changeCardOneBackgroundToColorThree); 
+    // colorFour.removeEventListener("click", changeCardOneBackgroundToColorFour); 
+    // colorFive.removeEventListener("click", changeCardOneBackgroundToColorFive); 
 
-    colorPicker.removeEventListener('click', selectColorPicker)
+    // colorPicker.removeEventListener('click', selectColorPicker)
 }
 
 function changeCardOneBackgroundToColorOne() {
@@ -559,26 +560,26 @@ function selectCardOneCircleOne() {
     isSelectedCard1Circle1 = true
         cardOneCircleOne.style.border = '3px solid hsl(238, 100%, 68%)';
         // colorOne.removeEventListener("click", checkIsSelectedColor1); 
-        colorOne.addEventListener("click", changeCardOneCircleOneToColorOne); 
-        colorTwo.addEventListener("click", changeCardOneCircleOneToColorTwo); 
-        colorThree.addEventListener("click", changeCardOneCircleOneToColorThree); 
-        colorFour.addEventListener("click", changeCardOneCircleOneToColorFour); 
-        colorFive.addEventListener("click", changeCardOneCircleOneToColorFive); 
+        // colorOne.addEventListener("click", changeCardOneCircleOneToColorOne); 
+        // colorTwo.addEventListener("click", changeCardOneCircleOneToColorTwo); 
+        // colorThree.addEventListener("click", changeCardOneCircleOneToColorThree); 
+        // colorFour.addEventListener("click", changeCardOneCircleOneToColorFour); 
+        // colorFive.addEventListener("click", changeCardOneCircleOneToColorFive); 
                
-        colorPicker.addEventListener('click', selectColorPicker)
+        // colorPicker.addEventListener('click', selectColorPicker)
 }
 
 function unSelectCardOneCircleOne() {
     isSelectedCard1Circle1 = false
     cardOneCircleOne.style.border = 'none';
     // colorOne.addEventListener("click", checkIsSelectedColor1);  
-    colorOne.removeEventListener("click", changeCardOneCircleOneToColorOne); 
-    colorTwo.removeEventListener("click", changeCardOneCircleOneToColorTwo); 
-    colorThree.removeEventListener("click", changeCardOneCircleOneToColorThree); 
-    colorFour.removeEventListener("click", changeCardOneCircleOneToColorFour); 
-    colorFive.removeEventListener("click", changeCardOneCircleOneToColorFive); 
+    // colorOne.removeEventListener("click", changeCardOneCircleOneToColorOne); 
+    // colorTwo.removeEventListener("click", changeCardOneCircleOneToColorTwo); 
+    // colorThree.removeEventListener("click", changeCardOneCircleOneToColorThree); 
+    // colorFour.removeEventListener("click", changeCardOneCircleOneToColorFour); 
+    // colorFive.removeEventListener("click", changeCardOneCircleOneToColorFive); 
 
-    colorPicker.removeEventListener('click', selectColorPicker)
+    // colorPicker.removeEventListener('click', selectColorPicker)
 }
 
 function changeCardOneCircleOneToColorOne() {
@@ -617,26 +618,26 @@ function selectCardOneCircleTwo() {
     isSelectedCard1Circle2 = true
         cardOneCircleTwo.style.border = '3px solid hsl(238, 100%, 68%)';
         // colorOne.removeEventListener("click", checkIsSelectedColor1); 
-        colorOne.addEventListener("click", changeCardOneCircleTwoToColorOne);
-        colorTwo.addEventListener("click", changeCardOneCircleTwoToColorTwo); 
-        colorThree.addEventListener("click", changeCardOneCircleTwoToColorThree); 
-        colorFour.addEventListener("click", changeCardOneCircleTwoToColorFour); 
-        colorFive.addEventListener("click", changeCardOneCircleTwoToColorFive);  
+        // colorOne.addEventListener("click", changeCardOneCircleTwoToColorOne);
+        // colorTwo.addEventListener("click", changeCardOneCircleTwoToColorTwo); 
+        // colorThree.addEventListener("click", changeCardOneCircleTwoToColorThree); 
+        // colorFour.addEventListener("click", changeCardOneCircleTwoToColorFour); 
+        // colorFive.addEventListener("click", changeCardOneCircleTwoToColorFive);  
         
-        colorPicker.addEventListener('click', selectColorPicker)
+        // colorPicker.addEventListener('click', selectColorPicker)
         
 }
 function unSelectCardOneCircleTwo() {
     isSelectedCard1Circle2 = false
     cardOneCircleTwo.style.border = 'none';
     // colorOne.addEventListener("click", checkIsSelectedColor1);  
-    colorOne.removeEventListener("click", changeCardOneCircleTwoToColorOne);
-    colorTwo.removeEventListener("click", changeCardOneCircleTwoToColorTwo); 
-    colorThree.removeEventListener("click", changeCardOneCircleTwoToColorThree); 
-    colorFour.removeEventListener("click", changeCardOneCircleTwoToColorFour); 
-    colorFive.removeEventListener("click", changeCardOneCircleTwoToColorFive); 
+    // colorOne.removeEventListener("click", changeCardOneCircleTwoToColorOne);
+    // colorTwo.removeEventListener("click", changeCardOneCircleTwoToColorTwo); 
+    // colorThree.removeEventListener("click", changeCardOneCircleTwoToColorThree); 
+    // colorFour.removeEventListener("click", changeCardOneCircleTwoToColorFour); 
+    // colorFive.removeEventListener("click", changeCardOneCircleTwoToColorFive); 
     
-    colorPicker.removeEventListener('click', selectColorPicker)
+    // colorPicker.removeEventListener('click', selectColorPicker)
 }
 
 function changeCardOneCircleTwoToColorOne() {
@@ -675,27 +676,27 @@ function selectCardOneCircleThree() {
     isSelectedCard1Circle3 = true
         cardOneCircleThree.style.border = '3px solid hsl(238, 100%, 68%)';
         // colorOne.removeEventListener("click", checkIsSelectedColor1); 
-        colorOne.addEventListener("click", changeCardOneCircleThreeToColorOne); 
-        colorTwo.addEventListener("click", changeCardOneCircleThreeToColorTwo); 
-        colorThree.addEventListener("click", changeCardOneCircleThreeToColorThree); 
-        colorFour.addEventListener("click", changeCardOneCircleThreeToColorFour); 
-        colorFive.addEventListener("click", changeCardOneCircleThreeToColorFive);    
+        // colorOne.addEventListener("click", changeCardOneCircleThreeToColorOne); 
+        // colorTwo.addEventListener("click", changeCardOneCircleThreeToColorTwo); 
+        // colorThree.addEventListener("click", changeCardOneCircleThreeToColorThree); 
+        // colorFour.addEventListener("click", changeCardOneCircleThreeToColorFour); 
+        // colorFive.addEventListener("click", changeCardOneCircleThreeToColorFive);    
         
 
-        colorPicker.addEventListener('click', selectColorPicker)
+        // colorPicker.addEventListener('click', selectColorPicker)
 
 }
 function unSelectCardOneCircleThree() {
     isSelectedCard1Circle3 = false
     cardOneCircleThree.style.border = 'none';
     // colorOne.addEventListener("click", checkIsSelectedColor1);  
-    colorOne.removeEventListener("click", changeCardOneCircleThreeToColorOne); 
-    colorTwo.removeEventListener("click", changeCardOneCircleThreeToColorTwo); 
-    colorThree.removeEventListener("click", changeCardOneCircleThreeToColorThree); 
-    colorFour.removeEventListener("click", changeCardOneCircleThreeToColorFour); 
-    colorFive.removeEventListener("click", changeCardOneCircleThreeToColorFive); 
+    // colorOne.removeEventListener("click", changeCardOneCircleThreeToColorOne); 
+    // colorTwo.removeEventListener("click", changeCardOneCircleThreeToColorTwo); 
+    // colorThree.removeEventListener("click", changeCardOneCircleThreeToColorThree); 
+    // colorFour.removeEventListener("click", changeCardOneCircleThreeToColorFour); 
+    // colorFive.removeEventListener("click", changeCardOneCircleThreeToColorFive); 
 
-    colorPicker.removeEventListener('click', selectColorPicker)
+    // colorPicker.removeEventListener('click', selectColorPicker)
 
 }
 
@@ -735,26 +736,26 @@ function selectCardOneText() {
     isSelectedCard1Text = true
         cardOneText.style.border = '3px solid hsl(238, 100%, 68%)';
         // colorOne.removeEventListener("click", checkIsSelectedColor1); 
-        colorOne.addEventListener("click", changeCardOneTextToColorOne); 
-        colorTwo.addEventListener("click", changeCardOneTextToColorTwo); 
-        colorThree.addEventListener("click", changeCardOneTextToColorThree); 
-        colorFour.addEventListener("click", changeCardOneTextToColorFour); 
-        colorFive.addEventListener("click", changeCardOneTextToColorFive); 
+        // colorOne.addEventListener("click", changeCardOneTextToColorOne); 
+        // colorTwo.addEventListener("click", changeCardOneTextToColorTwo); 
+        // colorThree.addEventListener("click", changeCardOneTextToColorThree); 
+        // colorFour.addEventListener("click", changeCardOneTextToColorFour); 
+        // colorFive.addEventListener("click", changeCardOneTextToColorFive); 
 
-        colorPicker.addEventListener('click', selectColorPicker)
+        // colorPicker.addEventListener('click', selectColorPicker)
            
 }
 function unSelectCardOneText() {
     isSelectedCard1Text = false
     cardOneText.style.border = 'none';
     // colorOne.addEventListener("click", checkIsSelectedColor1);  
-    colorOne.removeEventListener("click", changeCardOneTextToColorOne); 
-    colorTwo.removeEventListener("click", changeCardOneTextToColorTwo); 
-    colorThree.removeEventListener("click", changeCardOneTextToColorThree); 
-    colorFour.removeEventListener("click", changeCardOneTextToColorFour); 
-    colorFive.removeEventListener("click", changeCardOneTextToColorFive); 
+    // colorOne.removeEventListener("click", changeCardOneTextToColorOne); 
+    // colorTwo.removeEventListener("click", changeCardOneTextToColorTwo); 
+    // colorThree.removeEventListener("click", changeCardOneTextToColorThree); 
+    // colorFour.removeEventListener("click", changeCardOneTextToColorFour); 
+    // colorFive.removeEventListener("click", changeCardOneTextToColorFive); 
 
-    colorPicker.removeEventListener('click', selectColorPicker)
+    // colorPicker.removeEventListener('click', selectColorPicker)
 }
 
 function changeCardOneTextToColorOne() {
@@ -792,26 +793,26 @@ function selectCardOneButton() {
     isSelectedCard1Button = true
     cardOneButton.style.border = '3px solid hsl(238, 100%, 68%)';
         // colorOne.removeEventListener("click", checkIsSelectedColor1); 
-        colorOne.addEventListener("click", changeCardOneButtonToColorOne); 
-        colorTwo.addEventListener("click", changeCardOneButtonToColorTwo); 
-        colorThree.addEventListener("click", changeCardOneButtonToColorThree); 
-        colorFour.addEventListener("click", changeCardOneButtonToColorFour); 
-        colorFive.addEventListener("click", changeCardOneButtonToColorFive);
+        // colorOne.addEventListener("click", changeCardOneButtonToColorOne); 
+        // colorTwo.addEventListener("click", changeCardOneButtonToColorTwo); 
+        // colorThree.addEventListener("click", changeCardOneButtonToColorThree); 
+        // colorFour.addEventListener("click", changeCardOneButtonToColorFour); 
+        // colorFive.addEventListener("click", changeCardOneButtonToColorFive);
         
-        colorPicker.addEventListener('click', selectColorPicker)
+        // colorPicker.addEventListener('click', selectColorPicker)
         
 }
 function unSelectCardOneButton() {
     isSelectedCard1Button = false
     cardOneButton.style.border = 'none';
     // colorOne.addEventListener("click", checkIsSelectedColor1);  
-    colorOne.removeEventListener("click", changeCardOneButtonToColorOne); 
-    colorTwo.removeEventListener("click", changeCardOneButtonToColorTwo); 
-    colorThree.removeEventListener("click", changeCardOneButtonToColorThree); 
-    colorFour.removeEventListener("click", changeCardOneButtonToColorFour); 
-    colorFive.removeEventListener("click", changeCardOneButtonToColorFive); 
+    // colorOne.removeEventListener("click", changeCardOneButtonToColorOne); 
+    // colorTwo.removeEventListener("click", changeCardOneButtonToColorTwo); 
+    // colorThree.removeEventListener("click", changeCardOneButtonToColorThree); 
+    // colorFour.removeEventListener("click", changeCardOneButtonToColorFour); 
+    // colorFive.removeEventListener("click", changeCardOneButtonToColorFive); 
 
-    colorPicker.removeEventListener('click', selectColorPicker)
+    // colorPicker.removeEventListener('click', selectColorPicker)
 }
 
 function changeCardOneButtonToColorOne() {
@@ -849,26 +850,26 @@ function selectCardOneButtonText() {
     isSelectedCard1ButtonText = true
     cardOneButtonText.style.border = '3px solid hsl(238, 100%, 68%)';
         // colorOne.removeEventListener("click", checkIsSelectedColor1); 
-        colorOne.addEventListener("click", changeCardOneButtonTextToColorOne); 
-        colorTwo.addEventListener("click", changeCardOneButtonTextToColorTwo); 
-        colorThree.addEventListener("click", changeCardOneButtonTextToColorThree); 
-        colorFour.addEventListener("click", changeCardOneButtonTextToColorFour); 
-        colorFive.addEventListener("click", changeCardOneButtonTextToColorFive);    
+        // colorOne.addEventListener("click", changeCardOneButtonTextToColorOne); 
+        // colorTwo.addEventListener("click", changeCardOneButtonTextToColorTwo); 
+        // colorThree.addEventListener("click", changeCardOneButtonTextToColorThree); 
+        // colorFour.addEventListener("click", changeCardOneButtonTextToColorFour); 
+        // colorFive.addEventListener("click", changeCardOneButtonTextToColorFive);    
 
-        colorPicker.addEventListener('click', selectColorPicker)
+        // colorPicker.addEventListener('click', selectColorPicker)
         
 }
 function unSelectCardOneButtonText() {
     isSelectedCard1ButtonText = false
     cardOneButtonText.style.border = 'none';
     // colorOne.addEventListener("click", checkIsSelectedColor1);  
-    colorOne.removeEventListener("click", changeCardOneButtonTextToColorOne); 
-    colorTwo.removeEventListener("click", changeCardOneButtonTextToColorTwo); 
-    colorThree.removeEventListener("click", changeCardOneButtonTextToColorThree); 
-    colorFour.removeEventListener("click", changeCardOneButtonTextToColorFour); 
-    colorFive.removeEventListener("click", changeCardOneButtonTextToColorFive); 
+    // colorOne.removeEventListener("click", changeCardOneButtonTextToColorOne); 
+    // colorTwo.removeEventListener("click", changeCardOneButtonTextToColorTwo); 
+    // colorThree.removeEventListener("click", changeCardOneButtonTextToColorThree); 
+    // colorFour.removeEventListener("click", changeCardOneButtonTextToColorFour); 
+    // colorFive.removeEventListener("click", changeCardOneButtonTextToColorFive); 
 
-    colorPicker.removeEventListener('click', selectColorPicker)
+    // colorPicker.removeEventListener('click', selectColorPicker)
 }
 
 function changeCardOneButtonTextToColorOne() {
@@ -912,28 +913,28 @@ function selectCardTwoBackground() {
     isSelectedCard2Background = true
         cardTwoBackground.style.border = '3px solid hsl(238, 100%, 68%)';
         // colorOne.removeEventListener("click", checkIsSelectedColor1); 
-        colorOne.addEventListener("click", changeCardTwoBackgroundToColorOne); 
-        colorTwo.addEventListener("click", changeCardTwoBackgroundToColorTwo); 
-        colorThree.addEventListener("click", changeCardTwoBackgroundToColorThree); 
-        colorFour.addEventListener("click", changeCardTwoBackgroundToColorFour); 
-        colorFive.addEventListener("click", changeCardTwoBackgroundToColorFive); 
+        // colorOne.addEventListener("click", changeCardTwoBackgroundToColorOne); 
+        // colorTwo.addEventListener("click", changeCardTwoBackgroundToColorTwo); 
+        // colorThree.addEventListener("click", changeCardTwoBackgroundToColorThree); 
+        // colorFour.addEventListener("click", changeCardTwoBackgroundToColorFour); 
+        // colorFive.addEventListener("click", changeCardTwoBackgroundToColorFive); 
         
         
-        colorPicker.addEventListener('click', selectColorPicker)
+        // colorPicker.addEventListener('click', selectColorPicker)
         
 }
 function unSelectCardTwoBackground() {
     isSelectedCard2Background = false
     cardTwoBackground.style.border = 'none';
     // colorOne.addEventListener("click", checkIsSelectedColor1);  
-    colorOne.removeEventListener("click", changeCardTwoBackgroundToColorOne); 
-    colorTwo.removeEventListener("click", changeCardTwoBackgroundToColorTwo); 
-    colorThree.removeEventListener("click", changeCardTwoBackgroundToColorThree); 
-    colorFour.removeEventListener("click", changeCardTwoBackgroundToColorFour); 
-    colorFive.removeEventListener("click", changeCardTwoBackgroundToColorFive); 
+    // colorOne.removeEventListener("click", changeCardTwoBackgroundToColorOne); 
+    // colorTwo.removeEventListener("click", changeCardTwoBackgroundToColorTwo); 
+    // colorThree.removeEventListener("click", changeCardTwoBackgroundToColorThree); 
+    // colorFour.removeEventListener("click", changeCardTwoBackgroundToColorFour); 
+    // colorFive.removeEventListener("click", changeCardTwoBackgroundToColorFive); 
 
     
-    colorPicker.removeEventListener('click', selectColorPicker)
+    // colorPicker.removeEventListener('click', selectColorPicker)
 }
 
 function changeCardTwoBackgroundToColorOne() {
@@ -973,25 +974,25 @@ function selectCardTwoCircleOne() {
     isSelectedCard2Circle1 = true
         cardTwoCircleOne.style.border = '3px solid hsl(238, 100%, 68%)';
         // colorOne.removeEventListener("click", checkIsSelectedColor1); 
-        colorOne.addEventListener("click", changeCardTwoCircleOneToColorOne); 
-        colorTwo.addEventListener("click", changeCardTwoCircleOneToColorTwo); 
-        colorThree.addEventListener("click", changeCardTwoCircleOneToColorThree); 
-        colorFour.addEventListener("click", changeCardTwoCircleOneToColorFour); 
-        colorFive.addEventListener("click", changeCardTwoCircleOneToColorFive); 
+        // colorOne.addEventListener("click", changeCardTwoCircleOneToColorOne); 
+        // colorTwo.addEventListener("click", changeCardTwoCircleOneToColorTwo); 
+        // colorThree.addEventListener("click", changeCardTwoCircleOneToColorThree); 
+        // colorFour.addEventListener("click", changeCardTwoCircleOneToColorFour); 
+        // colorFive.addEventListener("click", changeCardTwoCircleOneToColorFive); 
         
-        colorPicker.addEventListener('click', selectColorPicker)
+        // colorPicker.addEventListener('click', selectColorPicker)
 }
 function unSelectCardTwoCircleOne() {
     isSelectedCard2Circle1 = false
     cardTwoCircleOne.style.border = 'none';
     // colorOne.addEventListener("click", checkIsSelectedColor1);  
-    colorOne.removeEventListener("click", changeCardTwoCircleOneToColorOne); 
-    colorTwo.removeEventListener("click", changeCardTwoCircleOneToColorTwo); 
-    colorThree.removeEventListener("click", changeCardTwoCircleOneToColorThree); 
-    colorFour.removeEventListener("click", changeCardTwoCircleOneToColorFour); 
-    colorFive.removeEventListener("click", changeCardTwoCircleOneToColorFive); 
+    // colorOne.removeEventListener("click", changeCardTwoCircleOneToColorOne); 
+    // colorTwo.removeEventListener("click", changeCardTwoCircleOneToColorTwo); 
+    // colorThree.removeEventListener("click", changeCardTwoCircleOneToColorThree); 
+    // colorFour.removeEventListener("click", changeCardTwoCircleOneToColorFour); 
+    // colorFive.removeEventListener("click", changeCardTwoCircleOneToColorFive); 
 
-    colorPicker.removeEventListener('click', selectColorPicker)
+    // colorPicker.removeEventListener('click', selectColorPicker)
 }
 
 function changeCardTwoCircleOneToColorOne() {
@@ -1030,26 +1031,26 @@ function selectCardTwoCircleTwo() {
     isSelectedCard2Circle2 = true
         cardTwoCircleTwo.style.border = '3px solid hsl(238, 100%, 68%)';
         // colorOne.removeEventListener("click", checkIsSelectedColor1); 
-        colorOne.addEventListener("click", changeCardTwoCircleTwoToColorOne);
-        colorTwo.addEventListener("click", changeCardTwoCircleTwoToColorTwo); 
-        colorThree.addEventListener("click", changeCardTwoCircleTwoToColorThree); 
-        colorFour.addEventListener("click", changeCardTwoCircleTwoToColorFour); 
-        colorFive.addEventListener("click", changeCardTwoCircleTwoToColorFive); 
+        // colorOne.addEventListener("click", changeCardTwoCircleTwoToColorOne);
+        // colorTwo.addEventListener("click", changeCardTwoCircleTwoToColorTwo); 
+        // colorThree.addEventListener("click", changeCardTwoCircleTwoToColorThree); 
+        // colorFour.addEventListener("click", changeCardTwoCircleTwoToColorFour); 
+        // colorFive.addEventListener("click", changeCardTwoCircleTwoToColorFive); 
      
-        colorPicker.addEventListener('click', selectColorPicker)
+        // colorPicker.addEventListener('click', selectColorPicker)
         
 }
 function unSelectCardTwoCircleTwo() {
     isSelectedCard2Circle2 = false
     cardTwoCircleTwo.style.border = 'none';
     // colorOne.addEventListener("click", checkIsSelectedColor1);  
-    colorOne.removeEventListener("click", changeCardTwoCircleTwoToColorOne);
-    colorTwo.removeEventListener("click", changeCardTwoCircleTwoToColorTwo); 
-    colorThree.removeEventListener("click", changeCardTwoCircleTwoToColorThree); 
-    colorFour.removeEventListener("click", changeCardTwoCircleTwoToColorFour); 
-    colorFive.removeEventListener("click", changeCardTwoCircleTwoToColorFive);  
+    // colorOne.removeEventListener("click", changeCardTwoCircleTwoToColorOne);
+    // colorTwo.removeEventListener("click", changeCardTwoCircleTwoToColorTwo); 
+    // colorThree.removeEventListener("click", changeCardTwoCircleTwoToColorThree); 
+    // colorFour.removeEventListener("click", changeCardTwoCircleTwoToColorFour); 
+    // colorFive.removeEventListener("click", changeCardTwoCircleTwoToColorFive);  
 
-    colorPicker.removeEventListener('click', selectColorPicker)
+    // colorPicker.removeEventListener('click', selectColorPicker)
 }
 
 function changeCardTwoCircleTwoToColorOne() {
@@ -1088,25 +1089,25 @@ function selectCardTwoCircleThree() {
     isSelectedCard2Circle3 = true
         cardTwoCircleThree.style.border = '3px solid hsl(238, 100%, 68%)';
         // colorOne.removeEventListener("click", checkIsSelectedColor1); 
-        colorOne.addEventListener("click", changeCardTwoCircleThreeToColorOne); 
-        colorTwo.addEventListener("click", changeCardTwoCircleThreeToColorTwo); 
-        colorThree.addEventListener("click", changeCardTwoCircleThreeToColorThree); 
-        colorFour.addEventListener("click", changeCardTwoCircleThreeToColorFour); 
-        colorFive.addEventListener("click", changeCardTwoCircleThreeToColorFive); 
+        // colorOne.addEventListener("click", changeCardTwoCircleThreeToColorOne); 
+        // colorTwo.addEventListener("click", changeCardTwoCircleThreeToColorTwo); 
+        // colorThree.addEventListener("click", changeCardTwoCircleThreeToColorThree); 
+        // colorFour.addEventListener("click", changeCardTwoCircleThreeToColorFour); 
+        // colorFive.addEventListener("click", changeCardTwoCircleThreeToColorFive); 
         
-        colorPicker.addEventListener('click', selectColorPicker)
+        // colorPicker.addEventListener('click', selectColorPicker)
 }
 function unSelectCardTwoCircleThree() {
     isSelectedCard2Circle3 = false
     cardTwoCircleThree.style.border = 'none';
     // colorOne.addEventListener("click", checkIsSelectedColor1);  
-    colorOne.removeEventListener("click", changeCardTwoCircleThreeToColorOne); 
-    colorTwo.removeEventListener("click", changeCardTwoCircleThreeToColorTwo); 
-    colorThree.removeEventListener("click", changeCardTwoCircleThreeToColorThree); 
-    colorFour.removeEventListener("click", changeCardTwoCircleThreeToColorFour); 
-    colorFive.removeEventListener("click", changeCardTwoCircleThreeToColorFive); 
+    // colorOne.removeEventListener("click", changeCardTwoCircleThreeToColorOne); 
+    // colorTwo.removeEventListener("click", changeCardTwoCircleThreeToColorTwo); 
+    // colorThree.removeEventListener("click", changeCardTwoCircleThreeToColorThree); 
+    // colorFour.removeEventListener("click", changeCardTwoCircleThreeToColorFour); 
+    // colorFive.removeEventListener("click", changeCardTwoCircleThreeToColorFive); 
 
-    colorPicker.removeEventListener('click', selectColorPicker)
+    // colorPicker.removeEventListener('click', selectColorPicker)
 }
 
 function changeCardTwoCircleThreeToColorOne() {
@@ -1145,25 +1146,25 @@ function selectCardTwoText() {
     isSelectedCard2Text = true
         cardTwoText.style.border = '3px solid hsl(238, 100%, 68%)';
         // colorOne.removeEventListener("click", checkIsSelectedColor1); 
-        colorOne.addEventListener("click", changeCardTwoTextToColorOne); 
-        colorTwo.addEventListener("click", changeCardTwoTextToColorTwo); 
-        colorThree.addEventListener("click", changeCardTwoTextToColorThree); 
-        colorFour.addEventListener("click", changeCardTwoTextToColorFour); 
-        colorFive.addEventListener("click", changeCardTwoTextToColorFive); 
+        // colorOne.addEventListener("click", changeCardTwoTextToColorOne); 
+        // colorTwo.addEventListener("click", changeCardTwoTextToColorTwo); 
+        // colorThree.addEventListener("click", changeCardTwoTextToColorThree); 
+        // colorFour.addEventListener("click", changeCardTwoTextToColorFour); 
+        // colorFive.addEventListener("click", changeCardTwoTextToColorFive); 
         
-        colorPicker.addEventListener('click', selectColorPicker)
+        // colorPicker.addEventListener('click', selectColorPicker)
 }
 function unSelectCardTwoText() {
     isSelectedCard2Text = false
     cardTwoText.style.border = 'none';
     // colorOne.addEventListener("click", checkIsSelectedColor1);  
-    colorOne.removeEventListener("click", changeCardTwoTextToColorOne); 
-    colorTwo.removeEventListener("click", changeCardTwoTextToColorTwo); 
-    colorThree.removeEventListener("click", changeCardTwoTextToColorThree); 
-    colorFour.removeEventListener("click", changeCardTwoTextToColorFour); 
-    colorFive.removeEventListener("click", changeCardTwoTextToColorFive); 
+    // colorOne.removeEventListener("click", changeCardTwoTextToColorOne); 
+    // colorTwo.removeEventListener("click", changeCardTwoTextToColorTwo); 
+    // colorThree.removeEventListener("click", changeCardTwoTextToColorThree); 
+    // colorFour.removeEventListener("click", changeCardTwoTextToColorFour); 
+    // colorFive.removeEventListener("click", changeCardTwoTextToColorFive); 
 
-    colorPicker.removeEventListener('click', selectColorPicker)
+    // colorPicker.removeEventListener('click', selectColorPicker)
 }
 
 function changeCardTwoTextToColorOne() {
@@ -1202,26 +1203,26 @@ function selectCardTwoButton() {
     isSelectedCard2Button = true
     cardTwoButton.style.border = '3px solid hsl(238, 100%, 68%)';
         // colorOne.removeEventListener("click", checkIsSelectedColor1); 
-        colorOne.addEventListener("click", changeCardTwoButtonToColorOne); 
-        colorTwo.addEventListener("click", changeCardTwoButtonToColorTwo); 
-        colorThree.addEventListener("click", changeCardTwoButtonToColorThree); 
-        colorFour.addEventListener("click", changeCardTwoButtonToColorFour); 
-        colorFive.addEventListener("click", changeCardTwoButtonToColorFive); 
+        // colorOne.addEventListener("click", changeCardTwoButtonToColorOne); 
+        // colorTwo.addEventListener("click", changeCardTwoButtonToColorTwo); 
+        // colorThree.addEventListener("click", changeCardTwoButtonToColorThree); 
+        // colorFour.addEventListener("click", changeCardTwoButtonToColorFour); 
+        // colorFive.addEventListener("click", changeCardTwoButtonToColorFive); 
         
-        colorPicker.addEventListener('click', selectColorPicker)
+        // colorPicker.addEventListener('click', selectColorPicker)
         
 }
 function unSelectCardTwoButton() {
     isSelectedCard2Button = false
     cardTwoButton.style.border = 'none';
     // colorOne.addEventListener("click", checkIsSelectedColor1);  
-    colorOne.removeEventListener("click", changeCardTwoButtonToColorOne); 
-    colorTwo.removeEventListener("click", changeCardTwoButtonToColorTwo); 
-    colorThree.removeEventListener("click", changeCardTwoButtonToColorThree); 
-    colorFour.removeEventListener("click", changeCardTwoButtonToColorFour); 
-    colorFive.removeEventListener("click", changeCardTwoButtonToColorFive); 
+    // colorOne.removeEventListener("click", changeCardTwoButtonToColorOne); 
+    // colorTwo.removeEventListener("click", changeCardTwoButtonToColorTwo); 
+    // colorThree.removeEventListener("click", changeCardTwoButtonToColorThree); 
+    // colorFour.removeEventListener("click", changeCardTwoButtonToColorFour); 
+    // colorFive.removeEventListener("click", changeCardTwoButtonToColorFive); 
 
-    colorPicker.removeEventListener('click', selectColorPicker)
+    // colorPicker.removeEventListener('click', selectColorPicker)
 }
 
 function changeCardTwoButtonToColorOne() {
@@ -1261,13 +1262,13 @@ function selectCardTwoButtonText() {
     isSelectedCard2ButtonText = true
     cardTwoButtonText.style.border = '3px solid hsl(238, 100%, 68%)';
         // colorOne.removeEventListener("click", checkIsSelectedColor1); 
-        colorOne.addEventListener("click", changeCardTwoButtonTextToColorOne); 
-        colorTwo.addEventListener("click", changeCardTwoButtonTextToColorTwo); 
-        colorThree.addEventListener("click", changeCardTwoButtonTextToColorThree); 
-        colorFour.addEventListener("click", changeCardTwoButtonTextToColorFour); 
-        colorFive.addEventListener("click", changeCardTwoButtonTextToColorFive); 
+        // colorOne.addEventListener("click", changeCardTwoButtonTextToColorOne); 
+        // colorTwo.addEventListener("click", changeCardTwoButtonTextToColorTwo); 
+        // colorThree.addEventListener("click", changeCardTwoButtonTextToColorThree); 
+        // colorFour.addEventListener("click", changeCardTwoButtonTextToColorFour); 
+        // colorFive.addEventListener("click", changeCardTwoButtonTextToColorFive); 
 
-        colorPicker.addEventListener('click', selectColorPicker)
+        // colorPicker.addEventListener('click', selectColorPicker)
         
         
 }
@@ -1275,13 +1276,13 @@ function unSelectCardTwoButtonText() {
     isSelectedCard2ButtonText = false
     cardTwoButtonText.style.border = 'none';
     // colorOne.addEventListener("click", checkIsSelectedColor1);  
-    colorOne.removeEventListener("click", changeCardTwoButtonTextToColorOne); 
-    colorTwo.removeEventListener("click", changeCardTwoButtonTextToColorTwo); 
-    colorThree.removeEventListener("click", changeCardTwoButtonTextToColorThree); 
-    colorFour.removeEventListener("click", changeCardTwoButtonTextToColorFour); 
-    colorFive.removeEventListener("click", changeCardTwoButtonTextToColorFive); 
+    // colorOne.removeEventListener("click", changeCardTwoButtonTextToColorOne); 
+    // colorTwo.removeEventListener("click", changeCardTwoButtonTextToColorTwo); 
+    // colorThree.removeEventListener("click", changeCardTwoButtonTextToColorThree); 
+    // colorFour.removeEventListener("click", changeCardTwoButtonTextToColorFour); 
+    // colorFive.removeEventListener("click", changeCardTwoButtonTextToColorFive); 
 
-    colorPicker.removeEventListener('click', selectColorPicker)
+    // colorPicker.removeEventListener('click', selectColorPicker)
 }
 
 function changeCardTwoButtonTextToColorOne() {
@@ -2088,7 +2089,7 @@ function selectCardFourButtonText() {
         colorFour.addEventListener("click", changeCardFourButtonTextToColorFour); 
         colorFive.addEventListener("click", changeCardFourButtonTextToColorFive); 
         
-        colorPicker.addEventListener('click', selectColorPicker)
+        // colorPicker.addEventListener('click', selectColorPicker)
 }
 function unSelectCardFourButtonText() {
     isSelectedCard4ButtonText = false
@@ -2100,7 +2101,7 @@ function unSelectCardFourButtonText() {
     colorFour.removeEventListener("click", changeCardFourButtonTextToColorFour); 
     colorFive.removeEventListener("click", changeCardFourButtonTextToColorFive); 
 
-    colorPicker.removeEventListener('click', selectColorPicker)
+    // colorPicker.removeEventListener('click', selectColorPicker)
 }
 
 function changeCardFourButtonTextToColorOne() {
@@ -2125,6 +2126,300 @@ function changeCardFourButtonTextToColorFive() {
 }
 
 
+window.addEventListener("click", checkIsColorPickerSelected); 
+
+function checkIsColorPickerSelected() {
+
+    if(isColorPickerSelected) {
+        console.log(isColorPickerSelected)
+        colorPicker.removeEventListener('click', selectColorPicker)
+
+        // --------------------------
+        // CARD ONE
+        // --------------------------
+        // CARD ONE BACKGROUND
+        if(isSelectedCard1Background){
+            console.log(isColorPickerSelected)
+            colorOne.addEventListener("click", changeCardOneBackgroundToColorOne); 
+            colorTwo.addEventListener("click", changeCardOneBackgroundToColorTwo); 
+            colorThree.addEventListener("click", changeCardOneBackgroundToColorThree); 
+            colorFour.addEventListener("click", changeCardOneBackgroundToColorFour); 
+            colorFive.addEventListener("click", changeCardOneBackgroundToColorFive); 
+
+        }
+
+        // CARD ONE CIRCLE ONE
+        if(isSelectedCard1Circle1){
+            colorOne.addEventListener("click", changeCardOneCircleOneToColorOne); 
+            colorTwo.addEventListener("click", changeCardOneCircleOneToColorTwo); 
+            colorThree.addEventListener("click", changeCardOneCircleOneToColorThree); 
+            colorFour.addEventListener("click", changeCardOneCircleOneToColorFour); 
+            colorFive.addEventListener("click", changeCardOneCircleOneToColorFive); 
+        }
+       
+        
+        // CARD ONE CIRCLE TWO
+        if(isSelectedCard1Circle2){
+        colorOne.addEventListener("click", changeCardOneCircleTwoToColorOne);
+        colorTwo.addEventListener("click", changeCardOneCircleTwoToColorTwo); 
+        colorThree.addEventListener("click", changeCardOneCircleTwoToColorThree); 
+        colorFour.addEventListener("click", changeCardOneCircleTwoToColorFour); 
+        colorFive.addEventListener("click", changeCardOneCircleTwoToColorFive);  
+        }
+        
+        // CARD ONE CIRCLE THREE
+        if(isSelectedCard1Circle3){
+        colorOne.addEventListener("click", changeCardOneCircleThreeToColorOne); 
+        colorTwo.addEventListener("click", changeCardOneCircleThreeToColorTwo); 
+        colorThree.addEventListener("click", changeCardOneCircleThreeToColorThree); 
+        colorFour.addEventListener("click", changeCardOneCircleThreeToColorFour); 
+        colorFive.addEventListener("click", changeCardOneCircleThreeToColorFive); 
+        }
+
+        // CARD ONE TEXT
+        if(isSelectedCard1Text){
+        colorOne.addEventListener("click", changeCardOneTextToColorOne); 
+        colorTwo.addEventListener("click", changeCardOneTextToColorTwo); 
+        colorThree.addEventListener("click", changeCardOneTextToColorThree); 
+        colorFour.addEventListener("click", changeCardOneTextToColorFour); 
+        colorFive.addEventListener("click", changeCardOneTextToColorFive); 
+        }
+
+        // CARD ONE BUTTON
+        if(isSelectedCard1Button){
+        colorOne.addEventListener("click", changeCardOneButtonToColorOne); 
+        colorTwo.addEventListener("click", changeCardOneButtonToColorTwo); 
+        colorThree.addEventListener("click", changeCardOneButtonToColorThree); 
+        colorFour.addEventListener("click", changeCardOneButtonToColorFour); 
+        colorFive.addEventListener("click", changeCardOneButtonToColorFive);
+        }
+
+        // CARD ONE BUTTON TEXT
+        if(isSelectedCard1ButtonText){
+        colorOne.addEventListener("click", changeCardOneButtonTextToColorOne); 
+        colorTwo.addEventListener("click", changeCardOneButtonTextToColorTwo); 
+        colorThree.addEventListener("click", changeCardOneButtonTextToColorThree); 
+        colorFour.addEventListener("click", changeCardOneButtonTextToColorFour); 
+        colorFive.addEventListener("click", changeCardOneButtonTextToColorFive); 
+        }
+
+        // --------------------------
+        // CARD TWO
+        // --------------------------
+        // CARD TWO BACKGROUND
+        if(isSelectedCard2Background){
+            console.log(isColorPickerSelected)
+            colorOne.addEventListener("click", changeCardTwoBackgroundToColorOne); 
+            colorTwo.addEventListener("click", changeCardTwoBackgroundToColorTwo); 
+            colorThree.addEventListener("click", changeCardTwoBackgroundToColorThree); 
+            colorFour.addEventListener("click", changeCardTwoBackgroundToColorFour); 
+            colorFive.addEventListener("click", changeCardTwoBackgroundToColorFive); 
+
+        }
+
+        // CARD TWO CIRCLE ONE
+        if(isSelectedCard2Circle1){
+            colorOne.addEventListener("click", changeCardTwoCircleOneToColorOne); 
+            colorTwo.addEventListener("click", changeCardTwoCircleOneToColorTwo); 
+            colorThree.addEventListener("click", changeCardTwoCircleOneToColorThree); 
+            colorFour.addEventListener("click", changeCardTwoCircleOneToColorFour); 
+            colorFive.addEventListener("click", changeCardTwoCircleOneToColorFive); 
+        }
+       
+        
+        // CARD TWO CIRCLE TWO
+        if(isSelectedCard2Circle2){
+        colorOne.addEventListener("click", changeCardTwoCircleTwoToColorOne);
+        colorTwo.addEventListener("click", changeCardTwoCircleTwoToColorTwo); 
+        colorThree.addEventListener("click", changeCardTwoCircleTwoToColorThree); 
+        colorFour.addEventListener("click", changeCardTwoCircleTwoToColorFour); 
+        colorFive.addEventListener("click", changeCardTwoCircleTwoToColorFive);  
+        }
+        
+        // CARD TWO CIRCLE THREE
+        if(isSelectedCard2Circle3){
+        colorOne.addEventListener("click", changeCardTwoCircleThreeToColorOne); 
+        colorTwo.addEventListener("click", changeCardTwoCircleThreeToColorTwo); 
+        colorThree.addEventListener("click", changeCardTwoCircleThreeToColorThree); 
+        colorFour.addEventListener("click", changeCardTwoCircleThreeToColorFour); 
+        colorFive.addEventListener("click", changeCardTwoCircleThreeToColorFive); 
+        }
+
+        // CARTWO TEXT
+        if(isSelectedCard2Text){
+        colorOne.addEventListener("click", changeCardTwoTextToColorOne); 
+        colorTwo.addEventListener("click", changeCardTwoTextToColorTwo); 
+        colorThree.addEventListener("click", changeCardTwoTextToColorThree); 
+        colorFour.addEventListener("click", changeCardTwoTextToColorFour); 
+        colorFive.addEventListener("click", changeCardTwoTextToColorFive); 
+        }
+
+        // CARD TWO BUTTON
+        if(isSelectedCard2Button){
+        colorOne.addEventListener("click", changeCardTwoButtonToColorOne); 
+        colorTwo.addEventListener("click", changeCardTwoButtonToColorTwo); 
+        colorThree.addEventListener("click", changeCardTwoButtonToColorThree); 
+        colorFour.addEventListener("click", changeCardTwoButtonToColorFour); 
+        colorFive.addEventListener("click", changeCardTwoButtonToColorFive);
+        }
+
+        // CARD TWO BUTTON TEXT
+        if(isSelectedCard2ButtonText){
+        colorOne.addEventListener("click", changeCardTwoButtonTextToColorOne); 
+        colorTwo.addEventListener("click", changeCardTwoButtonTextToColorTwo); 
+        colorThree.addEventListener("click", changeCardTwoButtonTextToColorThree); 
+        colorFour.addEventListener("click", changeCardTwoButtonTextToColorFour); 
+        colorFive.addEventListener("click", changeCardTwoButtonTextToColorFive); 
+        }
+
+    }else if (!isColorPickerSelected) {
+
+        colorPicker.addEventListener('click', selectColorPicker)
+         
+
+        // --------------------------
+        // CARD ONE
+        // --------------------------
+        // CARD ONE BACKGROUND
+        if(!isSelectedCard1Background){
+            console.log(isColorPickerSelected)
+            colorOne.removeEventListener("click", changeCardOneBackgroundToColorOne); 
+            colorTwo.removeEventListener("click", changeCardOneBackgroundToColorTwo); 
+            colorThree.removeEventListener("click", changeCardOneBackgroundToColorThree); 
+            colorFour.removeEventListener("click", changeCardOneBackgroundToColorFour); 
+            colorFive.removeEventListener("click", changeCardOneBackgroundToColorFive); 
+
+        }
+
+        // CARD ONE CIRCLE ONE
+        if(!isSelectedCard1Circle1){
+            colorOne.removeEventListener("click", changeCardOneCircleOneToColorOne); 
+            colorTwo.removeEventListener("click", changeCardOneCircleOneToColorTwo); 
+            colorThree.removeEventListener("click", changeCardOneCircleOneToColorThree); 
+            colorFour.removeEventListener("click", changeCardOneCircleOneToColorFour); 
+            colorFive.removeEventListener("click", changeCardOneCircleOneToColorFive); 
+        }
+       
+        
+        // CARD ONE CIRCLE TWO
+        if(!isSelectedCard1Circle2){
+        colorOne.removeEventListener("click", changeCardOneCircleTwoToColorOne);
+        colorTwo.removeEventListener("click", changeCardOneCircleTwoToColorTwo); 
+        colorThree.removeEventListener("click", changeCardOneCircleTwoToColorThree); 
+        colorFour.removeEventListener("click", changeCardOneCircleTwoToColorFour); 
+        colorFive.removeEventListener("click", changeCardOneCircleTwoToColorFive);  
+        }
+        
+        // CARD ONE CIRCLE THREE
+        if(!isSelectedCard1Circle3){
+        colorOne.removeEventListener("click", changeCardOneCircleThreeToColorOne); 
+        colorTwo.removeEventListener("click", changeCardOneCircleThreeToColorTwo); 
+        colorThree.removeEventListener("click", changeCardOneCircleThreeToColorThree); 
+        colorFour.removeEventListener("click", changeCardOneCircleThreeToColorFour); 
+        colorFive.removeEventListener("click", changeCardOneCircleThreeToColorFive); 
+        }
+
+        // CARD ONE TEXT
+        if(!isSelectedCard1Text){
+        colorOne.removeEventListener("click", changeCardOneTextToColorOne); 
+        colorTwo.removeEventListener("click", changeCardOneTextToColorTwo); 
+        colorThree.removeEventListener("click", changeCardOneTextToColorThree); 
+        colorFour.removeEventListener("click", changeCardOneTextToColorFour); 
+        colorFive.removeEventListener("click", changeCardOneTextToColorFive); 
+        }
+
+        // CARD ONE BUTTON
+        if(!isSelectedCard1Button){
+        colorOne.removeEventListener("click", changeCardOneButtonToColorOne); 
+        colorTwo.removeEventListener("click", changeCardOneButtonToColorTwo); 
+        colorThree.removeEventListener("click", changeCardOneButtonToColorThree); 
+        colorFour.removeEventListener("click", changeCardOneButtonToColorFour); 
+        colorFive.removeEventListener("click", changeCardOneButtonToColorFive);
+        }
+
+        // CARD ONE BUTTON TEXT
+        if(!isSelectedCard1ButtonText){
+        colorOne.removeEventListener("click", changeCardOneButtonTextToColorOne); 
+        colorTwo.removeEventListener("click", changeCardOneButtonTextToColorTwo); 
+        colorThree.removeEventListener("click", changeCardOneButtonTextToColorThree); 
+        colorFour.removeEventListener("click", changeCardOneButtonTextToColorFour); 
+        colorFive.removeEventListener("click", changeCardOneButtonTextToColorFive); 
+        }
+
+        // --------------------------
+        // CARD TWO
+        // --------------------------
+        // CARD TWO BACKGROUND
+        if(isSelectedCard2Background){
+            console.log(isColorPickerSelected)
+            colorOne.removeEventListener("click", changeCardTwoBackgroundToColorOne); 
+            colorTwo.removeEventListener("click", changeCardTwoBackgroundToColorTwo); 
+            colorThree.removeEventListener("click", changeCardTwoBackgroundToColorThree); 
+            colorFour.removeEventListener("click", changeCardTwoBackgroundToColorFour); 
+            colorFive.removeEventListener("click", changeCardTwoBackgroundToColorFive); 
+
+        }
+
+        // CARD TWO CIRCLE ONE
+        if(isSelectedCard2Circle1){
+            colorOne.removeEventListener("click", changeCardTwoCircleOneToColorOne); 
+            colorTwo.removeEventListener("click", changeCardTwoCircleOneToColorTwo); 
+            colorThree.removeEventListener("click", changeCardTwoCircleOneToColorThree); 
+            colorFour.removeEventListener("click", changeCardTwoCircleOneToColorFour); 
+            colorFive.removeEventListener("click", changeCardTwoCircleOneToColorFive); 
+        }
+       
+        
+        // CARD TWO CIRCLE TWO
+        if(isSelectedCard2Circle2){
+        colorOne.removeEventListener("click", changeCardTwoCircleTwoToColorOne);
+        colorTwo.removeEventListener("click", changeCardTwoCircleTwoToColorTwo); 
+        colorThree.removeEventListener("click", changeCardTwoCircleTwoToColorThree); 
+        colorFour.removeEventListener("click", changeCardTwoCircleTwoToColorFour); 
+        colorFive.removeEventListener("click", changeCardTwoCircleTwoToColorFive);  
+        }
+        
+        // CARD TWO CIRCLE THREE
+        if(isSelectedCard2Circle3){
+        colorOne.removeEventListener("click", changeCardTwoCircleThreeToColorOne); 
+        colorTwo.removeEventListener("click", changeCardTwoCircleThreeToColorTwo); 
+        colorThree.removeEventListener("click", changeCardTwoCircleThreeToColorThree); 
+        colorFour.removeEventListener("click", changeCardTwoCircleThreeToColorFour); 
+        colorFive.removeEventListener("click", changeCardTwoCircleThreeToColorFive); 
+        }
+
+        // CARTWO TEXT
+        if(isSelectedCard2Text){
+        colorOne.removeEventListener("click", changeCardTwoTextToColorOne); 
+        colorTwo.removeEventListener("click", changeCardTwoTextToColorTwo); 
+        colorThree.removeEventListener("click", changeCardTwoTextToColorThree); 
+        colorFour.removeEventListener("click", changeCardTwoTextToColorFour); 
+        colorFive.removeEventListener("click", changeCardTwoTextToColorFive); 
+        }
+
+        // CARD TWO BUTTON
+        if(isSelectedCard2Button){
+        colorOne.removeEventListener("click", changeCardTwoButtonToColorOne); 
+        colorTwo.removeEventListener("click", changeCardTwoButtonToColorTwo); 
+        colorThree.removeEventListener("click", changeCardTwoButtonToColorThree); 
+        colorFour.removeEventListener("click", changeCardTwoButtonToColorFour); 
+        colorFive.removeEventListener("click", changeCardTwoButtonToColorFive);
+        }
+
+        // CARD TWO BUTTON TEXT
+        if(isSelectedCard2ButtonText){
+        colorOne.removeEventListener("click", changeCardTwoButtonTextToColorOne); 
+        colorTwo.removeEventListener("click", changeCardTwoButtonTextToColorTwo); 
+        colorThree.removeEventListener("click", changeCardTwoButtonTextToColorThree); 
+        colorFour.removeEventListener("click", changeCardTwoButtonTextToColorFour); 
+        colorFive.removeEventListener("click", changeCardTwoButtonTextToColorFive); 
+        }
+    }
+}
+
+
+
+
 
 
 
@@ -2142,6 +2437,7 @@ const htmlEl = document.querySelector('html');
 moveTool.addEventListener('click', selectMoveTool)
 // colorPicker.addEventListener('click', selectColorPicker)
 function selectMoveTool() {
+    isColorPickerSelected = false;
     selectionIndicator.classList.remove('moveDown');
     selectionIndicator.classList.toggle('moveUp');
 
@@ -2207,6 +2503,9 @@ function selectMoveTool() {
    cardFourButtonText.addEventListener("click", checkIsSelectedCard4ButtonText); 
 }
 function selectColorPicker() {
+    isColorPickerSelected = true;
+
+    console.log(isColorPickerSelected)
     selectionIndicator.classList.remove('moveUp');
     selectionIndicator.classList.add('moveDown');
 
