@@ -2516,7 +2516,7 @@ function selectMoveTool() {
 
 
     lockIcon.style.opacity = ".3"
-    lockIcon.title = "lock palette"
+    lockIcon.title = "The palette is unlocked"
     isColorsLocked = false
 
         
@@ -2532,7 +2532,16 @@ function selectMoveTool() {
     colorFourHexCode.contentEditable = true
     colorFiveHexCode.contentEditable = true
 
-    lockIcon.addEventListener('click', checkIsColorsLocked)
+    // lockIcon.addEventListener('click', checkIsColorsLocked)
+    // checkIsColorsLocked()
+
+    // function checkIsColorsLocked() {
+        if (isColorsLocked) {
+            lockColors();
+        } else if (!isColorsLocked) {
+            unLockColors();
+        }
+    // }
 
    // CARD ONE
    cardOneBackground.addEventListener("click", checkIsSelectedCard1Background); 
@@ -2587,7 +2596,7 @@ function selectColorPicker() {
  
     isColorsLocked = true;
     lockIcon.style.opacity = "1"
-   lockIcon.title = "unlock palette"
+   lockIcon.title = "The palette is locked"
 
    colorOne.removeEventListener("click", checkIsSelectedColor1); 
    colorTwo.removeEventListener("click", checkIsSelectedColor2); 
@@ -2608,7 +2617,16 @@ function selectColorPicker() {
    colorFourHexCode.contentEditable = false
    colorFiveHexCode.contentEditable = false
 
-   lockIcon.removeEventListener('click', checkIsColorsLocked)
+//    lockIcon.removeEventListener('click', checkIsColorsLocked)
+// checkIsColorsLocked()
+
+// function checkIsColorsLocked() {
+    if (isColorsLocked) {
+        lockColors();
+    } else if (!isColorsLocked) {
+        unLockColors();
+    }
+// }
 
  // CARD ONE
  cardOneBackground.removeEventListener("click", checkIsSelectedCard1Background); 
@@ -2655,18 +2673,18 @@ function selectColorPicker() {
 // lockIcon.addEventListener('click', checkIsColorsLocked)
 
 
-function checkIsColorsLocked() {
-    if (isColorsLocked) {
-        unLockColors();
-    } else if (!isColorsLocked) {
-        lockColors();
-    }
-}
+// function checkIsColorsLocked() {
+//     if (isColorsLocked) {
+//         unLockColors();
+//     } else if (!isColorsLocked) {
+//         lockColors();
+//     }
+// }
 
 
 function lockColors() {
    lockIcon.style.opacity = "1"
-   lockIcon.title = "unlock palette"
+   lockIcon.title = "The palette is locked"
 
    isColorsLocked = true;
    colorOne.removeEventListener("click", checkIsSelectedColor1); 
@@ -2697,9 +2715,9 @@ function lockColors() {
 }
 function unLockColors() {
 
-    selectMoveTool()
+    // selectMoveTool()
     lockIcon.style.opacity = ".3"
-    lockIcon.title = "lock palette"
+    lockIcon.title = "The palette is unlocked"
     isColorsLocked = false
 
         
