@@ -61,6 +61,8 @@ body {
           box-shadow: 0 0px 25px 0px rgba(0, 0, 0, 0.1);
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
+  padding-top: 40px;
+  overflow: hidden;
 }
 
 .palettesList-container__close-icon {
@@ -94,10 +96,9 @@ body {
 
 .palettesList-container .palettesList {
   width: 210px;
-  height: 100vh;
+  height: 100%;
   background-color: white;
   overflow-y: scroll;
-  margin-top: 40px;
   padding: 16px;
   background-color: #ffffff;
 }
