@@ -60,6 +60,8 @@
 
                     <h2>Your Palette</h2>
                     <!-- <img src="./lock-icon.svg" alt="lock icon" title="The palette is unlocked"> -->
+                    <img class="reset-icon" src="./reset-icon.svg" alt="reset icon" title="Reset your palette">
+                    <img class="add-to-folder-icon" src="./add-to-folder.svg" alt="add to folder icon" title="Add your palette to the storage">
                 </div>
             </div>
             <div class="cards">
@@ -108,7 +110,29 @@
             </div>
         </section>
     </main>
+    <div class="modal-overlay"></div>
 
+    <div class="add-palette-dialog-box">
+        <img class="close-icon" src="./close-icon.svg" alt="close icon">
+        <div class="modal-colors">
+            <div class="color color1"></div>
+            <div class="color color2"></div>
+            <div class="color color3"></div>
+            <div class="color color4"></div>
+            <div class="color color5"></div>
+        </div>
+        <form id="add-palette">
+            <input type="text" placeholder="Type a name..." name="paletteName" required>
+            <input type="submit" value="Add to storage" class="add-to-storage"></input>
+        </form>
+    </div>
+
+
+
+
+<ul class="palettesList">
+    <li></li>
+</ul>
     <script src="./script.js"></script>
 </body>
 </html>

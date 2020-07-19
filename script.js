@@ -172,6 +172,140 @@ function deselectAllCardElements(){
 }
 
 
+// RESET ICON
+const resetIcon = document.querySelector("img.reset-icon");
+resetIcon.addEventListener("click", resetPalette);
+
+function resetPalette() {
+    colorOne.style.backgroundColor = "#505050";
+    colorTwo.style.backgroundColor = "#B5B5B5";
+    colorThree.style.backgroundColor = "#666666";
+    colorFour.style.backgroundColor = "#000000";
+    colorFive.style.backgroundColor = "#ffffff";
+    colorOneHexCode.innerHTML = "#505050";
+    colorTwoHexCode.innerHTML = "#B5B5B5";
+    colorThreeHexCode.innerHTML = "#666666";
+    colorFourHexCode.innerHTML = "#000000";
+    colorFiveHexCode.innerHTML = "#ffffff";
+}
+
+// ADD TO THE STORAGE ICON
+const addToFolderIcon = document.querySelector("img.add-to-folder-icon");
+const modalOverlay = document.querySelector(".modal-overlay");
+const modalContainer = document.querySelector(".add-palette-dialog-box");
+const closeIcon = document.querySelector(".add-palette-dialog-box .close-icon");
+const modalColors = document.querySelector(".add-palette-dialog-box .modal-colors");
+
+const addPaletteForm = document.querySelector("#add-palette");
+// console.log(addPaletteForm)
+// const addToStorageBtn = document.querySelector("input.add-to-storage");
+const palettesList = document.querySelector('.palettesList');
+let palettes = JSON.parse(localStorage.getItem('palettes')) || [];
+
+addToFolderIcon.addEventListener("click", openModal);
+modalOverlay.addEventListener("click", closeModal);
+closeIcon.addEventListener("click", closeModal);
+// addToStorageBtn.addEventListener("click", addPaletteToStorage);
+addPaletteForm.addEventListener('submit', addPaletteToStorage);
+
+function openModal() {
+
+
+    modalContainer.style.display = "flex"
+    modalOverlay.style.display = "block"
+    modalOverlay.style.transform = "translate(-50%, -50%) scale(1)"
+    modalOverlay.style.opacity = 0.1
+    setTimeout(() => {
+        modalContainer.style.transform = "translate(-50%, -50%) scale(1)"
+        modalContainer.style.opacity = 1
+
+    }, 50)
+    
+    let code1 = colorOneHexCode.innerHTML
+    let code2 = colorTwoHexCode.innerHTML
+    let code3 = colorThreeHexCode.innerHTML
+    let code4 = colorFourHexCode.innerHTML
+    let code5 = colorFiveHexCode.innerHTML
+    // console.log(code1)
+    modalColors.innerHTML = `
+        <div class="modal-colors">
+            <div class="color color1" style="background-color: ${code1}"></div>
+            <div class="color color2" style="background-color: ${code2}"></div>
+            <div class="color color3" style="background-color: ${code3}"></div>
+            <div class="color color4" style="background-color: ${code4}"></div>
+            <div class="color color5" style="background-color: ${code5}"></div>
+        </div>
+    `
+ 
+    
+}
+function closeModal() {
+    console.log("clicked")
+    modalContainer.style.transform = "translate(-50%, -50%) scale(0)"
+    modalContainer.style.opacity = 0
+    setTimeout(() => {
+        modalContainer.style.display = "none"
+        modalOverlay.style.display = "none"
+        modalOverlay.style.transform = "translate(-50%, -50%) scale(0)"
+        modalOverlay.style.opacity = 0
+
+    }, 50)
+    
+   
+ 
+    
+}
+
+
+
+
+function addPaletteToStorage(e) {
+
+    e.preventDefault();
+
+    const paletteName = (this.querySelector('[name=paletteName]')).value;
+    let code1 = colorOneHexCode.innerHTML
+    let code2 = colorTwoHexCode.innerHTML
+    let code3 = colorThreeHexCode.innerHTML
+    let code4 = colorFourHexCode.innerHTML
+    let code5 = colorFiveHexCode.innerHTML
+    console.log(paletteName)
+    const palette = {
+        paletteName,
+        color1: code1,
+        color2: code2,
+        color3: code3,
+        color4: code4,
+        color5: code5,
+    }
+    palettes.push(palette);
+    localStorage.setItem('palettes', JSON.stringify(palettes));
+    createList(palettes, palettesList);
+    // console.log(palettes.toString());
+    // console.log(JSON.stringify(palettes));
+
+    this.reset();
+}
+
+function createList(palettes = [], palettesList) {
+    palettesList.innerHTML = palettes.map((palette, i) => {       
+        return `
+            <li>
+                <h4>${palette.paletteName}</h4>
+                <div class="storage-colors">
+                <div class="color color1" style="background-color: ${palette.color1}"></div>
+                <div class="color color2" style="background-color: ${palette.color2}"></div>
+                <div class="color color3" style="background-color: ${palette.color3}"></div>
+                <div class="color color4" style="background-color: ${palette.color4}"></div>
+                <div class="color color5" style="background-color: ${palette.color5}"></div>
+            </div>
+            </li>
+        
+        `
+    }).join('');
+}
+createList(palettes, palettesList)
+
 
 inputHue.addEventListener("input", changeColor);
 inputSaturation.addEventListener("input", changeColor);

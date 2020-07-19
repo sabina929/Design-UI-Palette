@@ -47,6 +47,252 @@ body {
   }
 }
 
+.palettesList {
+  position: fixed;
+  top: 50%;
+  left: 0%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  width: 240px;
+  height: 100vh;
+  z-index: 99999;
+  background-color: white;
+  overflow-y: scroll;
+  padding: 16px;
+  -webkit-box-shadow: 0 0px 25px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0px 25px 0px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.palettesList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.palettesList::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.palettesList::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #000000;
+}
+
+.palettesList li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-shadow: 0 2px 14px -2px rgba(0, 0, 0, 0.09);
+          box-shadow: 0 2px 14px -2px rgba(0, 0, 0, 0.09);
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 100%;
+  height: 70px;
+  padding: 8px 10px;
+}
+
+.palettesList li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.palettesList li h4 {
+  font-size: 1rem;
+}
+
+.palettesList li .storage-colors {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.palettesList li .storage-colors .color {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.palettesList li .storage-colors .color.color1 {
+  background-color: #505050;
+  margin-right: 5px;
+}
+
+.palettesList li .storage-colors .color.color2 {
+  background-color: #B5B5B5;
+  margin-right: 5px;
+}
+
+.palettesList li .storage-colors .color.color3 {
+  background-color: #666666;
+  margin-right: 5px;
+}
+
+.palettesList li .storage-colors .color.color4 {
+  background-color: #000000;
+  margin-right: 5px;
+}
+
+.palettesList li .storage-colors .color.color5 {
+  background-color: #ffffff;
+}
+
+.add-palette-dialog-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  display: none;
+  z-index: 999999;
+  width: 500px;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0px 5px -1px rgba(0, 0, 0, 0.1), 0 0px 40px -2px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0px 5px -1px rgba(0, 0, 0, 0.1), 0 0px 40px -2px rgba(0, 0, 0, 0.05);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.add-palette-dialog-box img.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  cursor: pointer;
+  z-index: 9999999999;
+}
+
+.add-palette-dialog-box .modal-colors {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 20px;
+}
+
+.add-palette-dialog-box .modal-colors .color {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.add-palette-dialog-box .modal-colors .color.color1 {
+  background-color: #505050;
+  margin-right: 20px;
+}
+
+.add-palette-dialog-box .modal-colors .color.color2 {
+  background-color: #B5B5B5;
+  margin-right: 20px;
+}
+
+.add-palette-dialog-box .modal-colors .color.color3 {
+  background-color: #666666;
+  margin-right: 20px;
+}
+
+.add-palette-dialog-box .modal-colors .color.color4 {
+  background-color: #000000;
+  margin-right: 20px;
+}
+
+.add-palette-dialog-box .modal-colors .color.color5 {
+  background-color: #ffffff;
+}
+
+.add-palette-dialog-box form#add-palette {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.add-palette-dialog-box form#add-palette input[type="text"] {
+  width: 60%;
+  height: 40px;
+  padding: 5px;
+}
+
+.add-palette-dialog-box form#add-palette input.add-to-storage {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  opacity: .1;
+  z-index: 999998;
+}
+
 .ghost-element {
   position: absolute;
   top: 0;
@@ -401,16 +647,41 @@ main section.palette-cards .palette__container h2 {
   letter-spacing: -.2px;
 }
 
-main section.palette-cards .palette__container img {
+main section.palette-cards .palette__container img.reset-icon {
   position: absolute;
   top: -30px;
   right: 5px;
+  width: 21px;
+  height: auto;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   opacity: .3;
   cursor: pointer;
-  -webkit-transition: all .1s ease;
-  transition: all .1s ease;
+  -webkit-transition: all .2s linaer;
+  transition: all .2s linaer;
+}
+
+main section.palette-cards .palette__container img.add-to-folder-icon {
+  position: absolute;
+  top: -30px;
+  right: 35px;
+  width: 19px;
+  height: auto;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: .3;
+  cursor: pointer;
+  -webkit-transition: all .2s linaer;
+  transition: all .2s linaer;
+}
+
+main section.palette-cards .palette__container img:hover, main section.palette-cards .palette__container img:focus {
+  opacity: 1;
+}
+
+main section.palette-cards .palette__container img:active {
+  -webkit-transform: translate(-50%, -50%) scale(0.95);
+          transform: translate(-50%, -50%) scale(0.95);
 }
 
 main section.palette-cards .cards {
