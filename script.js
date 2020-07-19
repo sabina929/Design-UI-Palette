@@ -200,6 +200,7 @@ const addPaletteForm = document.querySelector("#add-palette");
 // console.log(addPaletteForm)
 // const addToStorageBtn = document.querySelector("input.add-to-storage");
 const palettesListContainerCloseIcon = document.querySelector('.palettesList-container__close-icon');
+const palettesListContainerClearStorage = document.querySelector('.palettesList-container button.clear-btn');
 const palettesListContainer = document.querySelector('.palettesList-container');
 const palettesList = document.querySelector('.palettesList');
 const paletteLists = document.querySelectorAll('.palettesList li');
@@ -297,8 +298,6 @@ function closeModal() {
 }
 
 
-
-
 function addPaletteToStorage(e) {
 
     e.preventDefault();
@@ -328,10 +327,16 @@ function addPaletteToStorage(e) {
 }
 
 function createList(palettes = [], palettesList) {
-    palettesList.innerHTML = palettes.map((palette, i) => {       
+
+    if(palettes.length === 0){
+       return palettesList.innerHTML = `
+            <p>No palettes here</p>
+        `
+    } else {
+        palettesList.innerHTML = palettes.map((palette, i) => {       
         return `
             <li onclick="applyPalette(this);">
-                <h4>${palette.paletteName}</h4>
+                <h4>${palette.paletteName}-${i}</h4>
                 <div class="storage-colors">
                 <div class="color color1" style="background-color: ${palette.color1}"></div>
                 <div class="color color2" style="background-color: ${palette.color2}"></div>
@@ -343,9 +348,18 @@ function createList(palettes = [], palettesList) {
         
         `
     }).join('');
+
+}
 }
 createList(palettes, palettesList)
 
+
+palettesListContainerClearStorage.addEventListener('click', clearStorage)
+function clearStorage() {
+    palettes.splice(0);
+    localStorage.setItem('palettes', JSON.stringify(palettes));
+    createList(palettes, palettesList);
+}
 
 inputHue.addEventListener("input", changeColor);
 inputSaturation.addEventListener("input", changeColor);
