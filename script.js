@@ -217,7 +217,7 @@ function openStorage(){
 }
 function closeStorage(){
     // palettesListContainer.style.left = "-15%"
-    palettesListContainer.style.transform = "translate(-210px, -50%)"
+    palettesListContainer.style.transform = "translate(-230px, -50%)"
     // console.log("clicked")
 }
 

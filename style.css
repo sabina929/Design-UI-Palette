@@ -51,8 +51,8 @@ body {
   position: fixed;
   top: 50%;
   left: 0%;
-  -webkit-transform: translate(-210px, -50%);
-          transform: translate(-210px, -50%);
+  -webkit-transform: translate(-230px, -50%);
+          transform: translate(-230px, -50%);
   width: 210px;
   height: 100vh;
   z-index: 999999;
