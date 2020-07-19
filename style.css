@@ -113,7 +113,8 @@ body {
 
 .palettesList-container .palettesList::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: #000000;
+  background: #c2c2c2;
+  background: #B5B5B5;
 }
 
 .palettesList-container .palettesList p {

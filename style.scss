@@ -110,7 +110,8 @@ border: none;
         
         &::-webkit-scrollbar-thumb {
             border-radius: 10px;
-            background: $black;
+            background: lighten($gray2, 5%);
+            background: $gray2;
         }
 
         p{
