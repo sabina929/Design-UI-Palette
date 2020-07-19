@@ -235,18 +235,18 @@ function applyPalette(element) {
     let stColor4 = element.querySelector('.storage-colors .color.color4').style.backgroundColor
     let stColor5 = element.querySelector('.storage-colors .color.color5').style.backgroundColor
 
-console.log(typeof stColor1)
+// console.log(typeof stColor1)
 
     colorOne.style.backgroundColor = stColor1
     colorTwo.style.backgroundColor = stColor2
     colorThree.style.backgroundColor = stColor3
     colorFour.style.backgroundColor = stColor4
     colorFive.style.backgroundColor = stColor5;
-    colorOneHexCode.innerHTML = "#505050";
-    colorTwoHexCode.innerHTML = "#B5B5B5";
-    colorThreeHexCode.innerHTML = "#666666";
-    colorFourHexCode.innerHTML = "#000000";
-    colorFiveHexCode.innerHTML = "#ffffff";
+    colorOneHexCode.innerHTML = rgbToHex(stColor1);
+    colorTwoHexCode.innerHTML = rgbToHex(stColor2);
+    colorThreeHexCode.innerHTML = rgbToHex(stColor3);
+    colorFourHexCode.innerHTML = rgbToHex(stColor4);
+    colorFiveHexCode.innerHTML = rgbToHex(stColor5);
 }
 
 
@@ -280,7 +280,7 @@ function openModal() {
     
 }
 function closeModal() {
-    console.log("clicked")
+    // console.log("clicked")
     modalContainer.style.transform = "translate(-50%, -50%) scale(0)"
     modalContainer.style.opacity = 0
     setTimeout(() => {
@@ -309,7 +309,7 @@ function addPaletteToStorage(e) {
     let code3 = colorThreeHexCode.innerHTML
     let code4 = colorFourHexCode.innerHTML
     let code5 = colorFiveHexCode.innerHTML
-    console.log(paletteName)
+    // console.log(paletteName)
     const palette = {
         paletteName,
         color1: code1,
@@ -625,7 +625,7 @@ function applyInputColorOneHexCode() {
     let inputColorOneHexCode = colorOneHexCode.textContent;
     colorOne.style.backgroundColor = inputColorOneHexCode;
 
-    
+
     let hslColor = hexToHsl(inputColorOneHexCode)
     // console.log(hslColor)
 
@@ -3070,4 +3070,25 @@ function hslToHex(h,s,l) {
     l = +(l * 100).toFixed(1);
   
     return {hslCode:"hsl(" + parseInt(h) + "," + parseInt(s) + "%," + parseInt(l) + "%)", h:parseInt(h), s:parseInt(s), l:parseInt(l)};
+  }
+
+  // RGB TO HEX
+  function rgbToHex(rgb) {
+    // Choose correct separator
+    let sep = rgb.indexOf(",") > -1 ? "," : " ";
+    // Turn "rgb(r,g,b)" into [r,g,b]
+    rgb = rgb.substr(4).split(")")[0].split(sep);
+  
+    let r = (+rgb[0]).toString(16),
+        g = (+rgb[1]).toString(16),
+        b = (+rgb[2]).toString(16);
+  
+    if (r.length == 1)
+      r = "0" + r;
+    if (g.length == 1)
+      g = "0" + g;
+    if (b.length == 1)
+      b = "0" + b;
+  
+    return "#" + r + g + b;
   }
