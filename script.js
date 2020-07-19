@@ -212,10 +212,13 @@ folderIcon.addEventListener("click", openStorage);
 palettesListContainerCloseIcon.addEventListener("click", closeStorage);
 
 function openStorage(){
-    palettesListContainer.style.left = "0%"
+    // palettesListContainer.style.left = "0%"
+    palettesListContainer.style.transform = "translate(0px, -50%)"
 }
 function closeStorage(){
-    palettesListContainer.style.left = "-15%"
+    // palettesListContainer.style.left = "-15%"
+    palettesListContainer.style.transform = "translate(-210px, -50%)"
+    // console.log("clicked")
 }
 
 
