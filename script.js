@@ -199,18 +199,58 @@ const modalColors = document.querySelector(".add-palette-dialog-box .modal-color
 const addPaletteForm = document.querySelector("#add-palette");
 // console.log(addPaletteForm)
 // const addToStorageBtn = document.querySelector("input.add-to-storage");
+const palettesListContainerCloseIcon = document.querySelector('.palettesList-container__close-icon');
+const palettesListContainer = document.querySelector('.palettesList-container');
 const palettesList = document.querySelector('.palettesList');
+const paletteLists = document.querySelectorAll('.palettesList li');
 let palettes = JSON.parse(localStorage.getItem('palettes')) || [];
+
+const folderIcon = document.querySelector('.folder-icon');
+
+folderIcon.addEventListener("click", openStorage);
+palettesListContainerCloseIcon.addEventListener("click", closeStorage);
+
+function openStorage(){
+    palettesListContainer.style.left = "0%"
+}
+function closeStorage(){
+    palettesListContainer.style.left = "-15%"
+}
+
 
 addToFolderIcon.addEventListener("click", openModal);
 modalOverlay.addEventListener("click", closeModal);
 closeIcon.addEventListener("click", closeModal);
 // addToStorageBtn.addEventListener("click", addPaletteToStorage);
 addPaletteForm.addEventListener('submit', addPaletteToStorage);
+// paletteLists.forEach(paletteList => {
+//     paletteList.addEventListener('click', applyPalette)
+// })
+
+function applyPalette(element) {
+
+    let stColor1 = element.querySelector('.storage-colors .color.color1').style.backgroundColor
+    let stColor2 = element.querySelector('.storage-colors .color.color2').style.backgroundColor
+    let stColor3 = element.querySelector('.storage-colors .color.color3').style.backgroundColor
+    let stColor4 = element.querySelector('.storage-colors .color.color4').style.backgroundColor
+    let stColor5 = element.querySelector('.storage-colors .color.color5').style.backgroundColor
+
+console.log(typeof stColor1)
+
+    colorOne.style.backgroundColor = stColor1
+    colorTwo.style.backgroundColor = stColor2
+    colorThree.style.backgroundColor = stColor3
+    colorFour.style.backgroundColor = stColor4
+    colorFive.style.backgroundColor = stColor5;
+    colorOneHexCode.innerHTML = "#505050";
+    colorTwoHexCode.innerHTML = "#B5B5B5";
+    colorThreeHexCode.innerHTML = "#666666";
+    colorFourHexCode.innerHTML = "#000000";
+    colorFiveHexCode.innerHTML = "#ffffff";
+}
+
 
 function openModal() {
-
-
     modalContainer.style.display = "flex"
     modalOverlay.style.display = "block"
     modalOverlay.style.transform = "translate(-50%, -50%) scale(1)"
@@ -290,7 +330,7 @@ function addPaletteToStorage(e) {
 function createList(palettes = [], palettesList) {
     palettesList.innerHTML = palettes.map((palette, i) => {       
         return `
-            <li>
+            <li onclick="applyPalette(this);">
                 <h4>${palette.paletteName}</h4>
                 <div class="storage-colors">
                 <div class="color color1" style="background-color: ${palette.color1}"></div>
@@ -585,6 +625,7 @@ function applyInputColorOneHexCode() {
     let inputColorOneHexCode = colorOneHexCode.textContent;
     colorOne.style.backgroundColor = inputColorOneHexCode;
 
+    
     let hslColor = hexToHsl(inputColorOneHexCode)
     // console.log(hslColor)
 
