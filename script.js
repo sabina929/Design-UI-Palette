@@ -121,6 +121,56 @@ const cardFourButton = document.querySelector(".card4.card .button");
 const cardFourButtonText = document.querySelector(".card4.card p");
 
 
+// GHOST ELEMENT
+const overlay = document.querySelector(".ghost-element");
+overlay.addEventListener("click", deselectAllCardElements);
+
+// function deselectAllCardElementsByKeypressing(e) {
+    // e = e||window.event
+//    let ctrlDown = e.ctrlKey||e.metaKey 
+//  if (ctrlDown && e.keyCode==68) {
+//     deselectAllCardElements()
+
+//  } 
+// }
+function deselectAllCardElements(){
+    // CARD ONE
+    unSelectCardOneBackground();
+    unSelectCardOneCircleOne();
+    unSelectCardOneCircleTwo();
+    unSelectCardOneCircleThree();
+    unSelectCardOneText();
+    unSelectCardOneButton();
+    unSelectCardOneButtonText();
+    
+    // CARD TWO
+    unSelectCardTwoBackground();
+    unSelectCardTwoCircleOne();
+    unSelectCardTwoCircleTwo();
+    unSelectCardTwoCircleThree();
+    unSelectCardTwoText();
+    unSelectCardTwoButton();
+    unSelectCardTwoButtonText();
+
+    // CARD THREE
+    unSelectCardThreeBackground();
+    unSelectCardThreeCircleOne();
+    unSelectCardThreeCircleTwo();
+    unSelectCardThreeCircleThree();
+    unSelectCardThreeText();
+    unSelectCardThreeButton();
+    unSelectCardThreeButtonText();
+
+    // CARD FOUR
+    unSelectCardFourBackground();
+    unSelectCardFourCircleOne();
+    unSelectCardFourCircleTwo();
+    unSelectCardFourCircleThree();
+    unSelectCardFourText();
+    unSelectCardFourButton();
+    unSelectCardFourButtonText();
+}
+
 
 
 inputHue.addEventListener("input", changeColor);
@@ -2469,6 +2519,10 @@ function checkKeyCode(event) {
         else if (x == 86) {
             selectMoveTool()
         }
+        else if (x == 68) {
+            selectMoveTool()
+            deselectAllCardElements()
+        }
 
     } else if(!isSelectedCard1Background && !isSelectedCard2Background && !isSelectedCard3Background && !isSelectedCard4Background && !isSelectedCard1Circle1 && !isSelectedCard2Circle1 && !isSelectedCard3Circle1 && !isSelectedCard4Circle1 && !isSelectedCard1Circle2 && !isSelectedCard2Circle2 && !isSelectedCard3Circle2 && !isSelectedCard4Circle2 && !isSelectedCard1Circle3 && !isSelectedCard2Circle3 && !isSelectedCard3Circle3 && !isSelectedCard4Circle3 && !isSelectedCard1Text && !isSelectedCard2Text && !isSelectedCard3Text && !isSelectedCard4Text && !isSelectedCard1Button && !isSelectedCard2Button && !isSelectedCard3Button && !isSelectedCard4Button  && !isSelectedCard1ButtonText && !isSelectedCard2ButtonText && !isSelectedCard3ButtonText && !isSelectedCard4ButtonText) {
             selectMoveTool()
@@ -2506,6 +2560,9 @@ function selectMoveTool() {
     document.addEventListener('mousemove', e => {
         tracker.setAttribute("style", "top: 0px; left: 0px; opacity: 0")
       })
+
+      // DESELECTION
+      overlay.addEventListener("click", deselectAllCardElements);
 
 
     // lockIcon.style.opacity = ".3"
@@ -2588,7 +2645,10 @@ function selectColorPicker() {
         tracker.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px; opacity: 1")
       })
  
-      
+      // DESELECTION
+      overlay.removeEventListener("click", deselectAllCardElements);
+
+
       //     lockIcon.style.opacity = "1"
       //    lockIcon.title = "The palette is locked"
       
