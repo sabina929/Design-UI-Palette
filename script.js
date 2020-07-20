@@ -406,6 +406,8 @@ function selectColorOne() {
         inputHue.value = hslColor.h
         inputSaturation.value = hslColor.s
         inputBrightness.value = hslColor.l
+
+        inputSaturation.style.background = `linear-gradient(90deg, white, hsl(${hslColor.h}, 100%, 50%))`;
     
         outputHueValue.textContent = hslColor.h
         outputSaturationValue.textContent = hslColor.s
@@ -438,6 +440,8 @@ function selectColorTwo() {
         inputSaturation.value = hslColor.s
         inputBrightness.value = hslColor.l
     
+        inputSaturation.style.background = `linear-gradient(90deg, white, hsl(${hslColor.h}, 100%, 50%))`;
+
         outputHueValue.textContent = hslColor.h
         outputSaturationValue.textContent = hslColor.s
         outputBrightnessValue.textContent = hslColor.l
@@ -469,6 +473,8 @@ function selectColorThree() {
         inputSaturation.value = hslColor.s
         inputBrightness.value = hslColor.l
     
+        inputSaturation.style.background = `linear-gradient(90deg, white, hsl(${hslColor.h}, 100%, 50%))`;
+
         outputHueValue.textContent = hslColor.h
         outputSaturationValue.textContent = hslColor.s
         outputBrightnessValue.textContent = hslColor.l
@@ -500,6 +506,8 @@ function selectColorFour() {
         inputSaturation.value = hslColor.s
         inputBrightness.value = hslColor.l
     
+        inputSaturation.style.background = `linear-gradient(90deg, white, hsl(${hslColor.h}, 100%, 50%))`;
+
         outputHueValue.textContent = hslColor.h
         outputSaturationValue.textContent = hslColor.s
         outputBrightnessValue.textContent = hslColor.l
