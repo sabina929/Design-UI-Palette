@@ -149,6 +149,7 @@ body {
   width: 100%;
   height: 70px;
   padding: 8px 10px;
+  position: relative;
 }
 
 .palettesList-container .palettesList li:not(:last-child) {
@@ -205,6 +206,19 @@ body {
 
 .palettesList-container .palettesList li .storage-colors .color.color5 {
   background-color: #ffffff;
+}
+
+.palettesList-container .palettesList li .delete-list {
+  position: absolute;
+  top: 6px;
+  right: 5px;
+  width: 19px;
+  height: auto;
+  opacity: .3;
+}
+
+.palettesList-container .palettesList li .delete-list:hover {
+  opacity: 1;
 }
 
 .folder-icon {

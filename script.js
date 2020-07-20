@@ -203,6 +203,7 @@ const palettesListContainerCloseIcon = document.querySelector('.palettesList-con
 const palettesListContainerClearStorage = document.querySelector('.palettesList-container button.clear-btn');
 const palettesListContainer = document.querySelector('.palettesList-container');
 const palettesList = document.querySelector('.palettesList');
+const deleteIcon = document.querySelector('.palettesList .delete-list');
 const paletteLists = document.querySelectorAll('.palettesList li');
 let palettes = JSON.parse(localStorage.getItem('palettes')) || [];
 
@@ -233,11 +234,11 @@ addPaletteForm.addEventListener('submit', addPaletteToStorage);
 
 function applyPalette(element) {
 
-    let stColor1 = element.querySelector('.storage-colors .color.color1').style.backgroundColor
-    let stColor2 = element.querySelector('.storage-colors .color.color2').style.backgroundColor
-    let stColor3 = element.querySelector('.storage-colors .color.color3').style.backgroundColor
-    let stColor4 = element.querySelector('.storage-colors .color.color4').style.backgroundColor
-    let stColor5 = element.querySelector('.storage-colors .color.color5').style.backgroundColor
+    let stColor1 = element.querySelector('.color.color1').style.backgroundColor
+    let stColor2 = element.querySelector('.color.color2').style.backgroundColor
+    let stColor3 = element.querySelector('.color.color3').style.backgroundColor
+    let stColor4 = element.querySelector('.color.color4').style.backgroundColor
+    let stColor5 = element.querySelector('.color.color5').style.backgroundColor
 
 // console.log(typeof stColor1)
 
@@ -313,6 +314,7 @@ function addPaletteToStorage(e) {
     let code5 = colorFiveHexCode.innerHTML
     // console.log(paletteName)
     const palette = {
+        id:  Date.now().toString(36) + Math.random().toString(36).substr(2),
         paletteName,
         color1: code1,
         color2: code2,
@@ -338,15 +340,16 @@ function createList(palettes = [], palettesList) {
     } else {
         palettesList.innerHTML = palettes.map((palette, i) => {       
         return `
-            <li onclick="applyPalette(this);">
+            <li data-id="${palette.id}">
                 <h4>${palette.paletteName}-${i}</h4>
-                <div class="storage-colors">
+                <div class="storage-colors" onclick="applyPalette(this);">
                 <div class="color color1" style="background-color: ${palette.color1}"></div>
                 <div class="color color2" style="background-color: ${palette.color2}"></div>
                 <div class="color color3" style="background-color: ${palette.color3}"></div>
                 <div class="color color4" style="background-color: ${palette.color4}"></div>
                 <div class="color color5" style="background-color: ${palette.color5}"></div>
             </div>
+            <img src="./delete-icon.svg" alt="trash icon" class="delete-list" onclick="deletePalette(this);">
             </li>
         
         `
@@ -355,6 +358,20 @@ function createList(palettes = [], palettesList) {
 }
 }
 createList(palettes, palettesList)
+
+
+function deletePalette(e) {
+    console.log(e)
+    var paletteId = e.parentNode.getAttribute("data-id");
+    console.log(paletteId)
+
+    let tempPalettes = JSON.parse(localStorage.getItem('palettes')).filter(palette => palette.id !== paletteId)
+    console.log(tempPalettes)
+
+    palettes = [...tempPalettes];
+    localStorage.setItem('palettes', JSON.stringify(palettes));
+    createList(palettes, palettesList);
+}
 
 
 palettesListContainerClearStorage.addEventListener('click', clearStorage)
