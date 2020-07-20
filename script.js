@@ -403,11 +403,13 @@ function selectColorOne() {
         let inputColorOneHexCode = colorOneHexCode.textContent;
         let hslColor = hexToHsl(inputColorOneHexCode)
     
-        inputHue.value = hslColor.h
+        let hValue = hslColor.h
+    
+        inputHue.value = hValue
         inputSaturation.value = hslColor.s
         inputBrightness.value = hslColor.l
-
-        inputSaturation.style.background = `linear-gradient(90deg, white, hsl(${hslColor.h}, 100%, 50%))`;
+    
+        inputSaturation.style.background = `linear-gradient(90deg, white, hsl(${hValue}, 100%, 50%))`;
     
         outputHueValue.textContent = hslColor.h
         outputSaturationValue.textContent = hslColor.s
@@ -436,11 +438,13 @@ function selectColorTwo() {
         let inputColorTwoHexCode = colorTwoHexCode.textContent;
         let hslColor = hexToHsl(inputColorTwoHexCode)
     
-        inputHue.value = hslColor.h
+        let hValue = hslColor.h
+    
+        inputHue.value = hValue
         inputSaturation.value = hslColor.s
         inputBrightness.value = hslColor.l
     
-        inputSaturation.style.background = `linear-gradient(90deg, white, hsl(${hslColor.h}, 100%, 50%))`;
+        inputSaturation.style.background = `linear-gradient(90deg, white, hsl(${hValue}, 100%, 50%))`;
 
         outputHueValue.textContent = hslColor.h
         outputSaturationValue.textContent = hslColor.s
@@ -469,11 +473,13 @@ function selectColorThree() {
         let inputColorThreeHexCode = colorThreeHexCode.textContent;
         let hslColor = hexToHsl(inputColorThreeHexCode)
     
-        inputHue.value = hslColor.h
+        let hValue = hslColor.h
+    
+        inputHue.value = hValue
         inputSaturation.value = hslColor.s
         inputBrightness.value = hslColor.l
     
-        inputSaturation.style.background = `linear-gradient(90deg, white, hsl(${hslColor.h}, 100%, 50%))`;
+        inputSaturation.style.background = `linear-gradient(90deg, white, hsl(${hValue}, 100%, 50%))`;
 
         outputHueValue.textContent = hslColor.h
         outputSaturationValue.textContent = hslColor.s
@@ -501,12 +507,14 @@ function selectColorFour() {
 
         let inputColorFourHexCode = colorFourHexCode.textContent;
         let hslColor = hexToHsl(inputColorFourHexCode)
+
+        let hValue = hslColor.h
     
-        inputHue.value = hslColor.h
+        inputHue.value = hValue
         inputSaturation.value = hslColor.s
         inputBrightness.value = hslColor.l
     
-        inputSaturation.style.background = `linear-gradient(90deg, white, hsl(${hslColor.h}, 100%, 50%))`;
+        inputSaturation.style.background = `linear-gradient(90deg, white, hsl(${hValue}, 100%, 50%))`;
 
         outputHueValue.textContent = hslColor.h
         outputSaturationValue.textContent = hslColor.s
@@ -535,9 +543,13 @@ function selectColorFive() {
         let inputColorFiveHexCode = colorFiveHexCode.textContent;
         let hslColor = hexToHsl(inputColorFiveHexCode)
     
-        inputHue.value = hslColor.h
+        let hValue = hslColor.h
+    
+        inputHue.value = hValue
         inputSaturation.value = hslColor.s
         inputBrightness.value = hslColor.l
+    
+        inputSaturation.style.background = `linear-gradient(90deg, white, hsl(${hValue}, 100%, 50%))`;
     
         outputHueValue.textContent = hslColor.h
         outputSaturationValue.textContent = hslColor.s
