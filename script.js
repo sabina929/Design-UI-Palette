@@ -361,12 +361,12 @@ createList(palettes, palettesList)
 
 
 function deletePalette(e) {
-    console.log(e)
+    // console.log(e)
     var paletteId = e.parentNode.getAttribute("data-id");
-    console.log(paletteId)
+    // console.log(paletteId)
 
     let tempPalettes = JSON.parse(localStorage.getItem('palettes')).filter(palette => palette.id !== paletteId)
-    console.log(tempPalettes)
+    // console.log(tempPalettes)
 
     palettes = [...tempPalettes];
     localStorage.setItem('palettes', JSON.stringify(palettes));
