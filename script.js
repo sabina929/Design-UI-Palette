@@ -349,7 +349,7 @@ function createList(palettes = [], palettesList) {
                 <div class="color color4" style="background-color: ${palette.color4}"></div>
                 <div class="color color5" style="background-color: ${palette.color5}"></div>
             </div>
-            <img src="./delete-icon.svg" alt="trash icon" class="delete-list" onclick="deletePalette(this);">
+            <img src="./images/delete-icon.svg" alt="trash icon" class="delete-list" onclick="deletePalette(this);">
             </li>
         
         `
